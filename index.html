@@ -7,6 +7,137 @@
         <link rel="stylesheet" type="text/css" href="styles.css" />
         <script src="http://jquery.com/src/jquery-latest.js"></script>
         <script>
+                function showAape(id){
+                    switch(id){
+                        case 'gaming':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#nav,#inter').toggleClass('participate');
+                                        $('#cocr,#sns').toggleClass('engage');
+                                        break;
+                        case 'm3r':     $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#nav,#inter').toggleClass('participate');
+                                        $('#cocr,#sns').toggleClass('engage');
+                                        break;
+                        case 'ar':      $('#vw').toggleClass('aware');
+                                        $('#tr,#cap').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#nav,#inter').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'vr':      $('#vw,#sh,#pub').toggleClass('aware');
+                                        $('#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#nav,#inter').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'bookmark':$('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#cap,#srt,#srch').toggleClass('attention');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'geolocation':  $('#vw,#sh').toggleClass('aware');
+                                        $('#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizp,#nav').toggleClass('participate');
+                                        $('#sns').toggleClass('engage');
+                                        break;
+                        case 'social':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#nav,#inter').toggleClass('participate');
+                                        $('#cocr,#sns').toggleClass('engage');
+                                        break;
+                        case 'web_prod':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#ctrl,#inter').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'wiki':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#ctrl').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'discussion':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#vizc,#ctrl,#nav').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'webcam':  $('#vw,#sh').toggleClass('aware');
+                                        $('#cap').toggleClass('attention');
+                                        $('#vizc,#vizp,#ctrl,#inter').toggleClass('participate');
+                                        $('#cocr').toggleClass('engage');
+                                        break;
+                        case 'commentary':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                            $('#cap').toggleClass('attention');
+                                            $('#vizc').toggleClass('participate');
+                                        break;
+                        case 'client_prod': $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                            $('#cap,#srt,#srch,#rt').toggleClass('attention');
+                                            $('#ctrl').toggleClass('participate');
+                                        break;
+                        case 'calendar':    $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                            $('#tr,#srt,#srch,#rt').toggleClass('attention');
+                                            $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case 'sim':     $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case 'blog':    $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#cap,#srt,#srch,#rt').toggleClass('attention');
+                                        $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case '2d':      $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case '3d':      $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case '4d':      $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#ctrl,#nav').toggleClass('participate');
+                                        break;
+                        case 'netw_analysis':  $('#vw,#sh,#pub').toggleClass('aware');
+                                        $('#tr,#srt,#srch').toggleClass('attention');
+                                        $('#nav').toggleClass('participate');
+                                        break;
+                        case 'image':   $('#vw').toggleClass('aware');
+                                        $('#cap').toggleClass('attention');
+                                        break;
+                        case 'video':   $('#vw').toggleClass('aware');
+                                        $('#tr,#cap').toggleClass('attention');
+                                        break;
+                        case 'audio':   $('#sh').toggleClass('aware');
+                                        $('#cap').toggleClass('attention');
+                                        break;
+                        case 'twitter': $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#srt,#srch,#rt').toggleClass('attention');
+                                        break;
+                        case 'sms':     $('#vw,#sh').toggleClass('aware');
+                                        $('#nt').toggleClass('attention');
+                                        break;
+                        case 'email':   $('#vw,#sh,#lnk').toggleClass('aware');
+                                        $('#nt,#tr,#srt,#srch,#rt').toggleClass('attention');
+                                        break;
+                        case 'rss':     $('#vw').toggleClass('aware');
+                                        $('#tr').toggleClass('attention');
+                                        break;
+                        case 'im':      $('#vw').toggleClass('aware');
+                                        $('#tr').toggleClass('attention');
+                                        break;
+                        case 'photoshare':  $('#vw,#sh,#pub,#lnk').toggleClass('aware');
+                                        $('#srt,#srch,#rt').toggleClass('attention');
+                                        break;
+                        case 'text':    $('#vw').toggleClass('aware');
+                                        break;
+                        case 'sketch':  $('#vw').toggleClass('aware');
+                                        break;
+                        case 'speech':  $('#vw').toggleClass('aware');
+                                        break;
+                        case 'gesture': $('#vw').toggleClass('aware');
+                                        break;
+                        case 'fax':     $('#vw,#sh').toggleClass('aware');
+                                        break;
+                        case 'mail':    $('#vw').toggleClass('aware');
+                                        break;
+                        
+                        };  
+                }
+                
                 function ccNetw(name,id){
                     var number = $('input:checked[name*=' + name + ']').length;
                     switch(number){
@@ -391,78 +522,77 @@
                         </div>
                         <div class="aape-zones">
                             <div class="grn-line">
-                                <img style="display:none;" id="gaming-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
-                                <img style="display:none;" id="m3r-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
-                                <img style="display:none;" id="ar" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
-                                <img style="display:none;" id="vr" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
-                                <img style="display:none;" id="bookmark" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
-                                <img style="display:none;" id="gelocation" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
-                                <img style="display:none;" id="social" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
-                                <img style="display:none;" id="web_prod" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
-                                <img style="display:none;" id="wiki" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
-                                <img style="display:none;" id="discussion" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
-                                <img style="display:none;" id="webcam-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                                <img style="display:none;" id="gaming-2" onmouseover="showAape('gaming');" onmouseout="showAape('gaming');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img style="display:none;" id="m3r-2" onmouseover="showAape('m3r');" onmouseout="showAape('m3r');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img style="display:none;" id="ar" onmouseover="showAape('ar');" onmouseout="showAape('ar');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
+                                <img style="display:none;" id="vr" onmouseover="showAape('vr');" onmouseout="showAape('vr');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
+                                <img style="display:none;" id="bookmark" onmouseover="showAape('bookmark');" onmouseout="showAape('bookmark');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
+                                <img style="display:none;" id="geolocation" onmouseover="showAape('geolocation');" onmouseout="showAape('geolocation');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
+                                <img style="display:none;" id="social" onmouseover="showAape('social');" onmouseout="showAape('social');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
+                                <img style="display:none;" id="web_prod" onmouseover="showAape('web_prod');" onmouseout="showAape('web_prod');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
+                                <img style="display:none;" id="wiki" onmouseover="showAape('wiki');" onmouseout="showAape('wiki');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
+                                <img style="display:none;" id="discussion" onmouseover="showAape('discussion');" onmouseout="showAape('discussion');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
+                                <img style="display:none;" id="webcam-2" onmouseover="showAape('webcam');" onmouseout="showAape('webcam');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
                             </div>
                             <div class="blu-line">
-                                <img style="display:none;" id="commentary" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
-                                <img style="display:none;" id="client_prod" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
-                                <img style="display:none;" id="calendar" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
-                                <img style="display:none;" id="sim" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
-                                <img style="display:none;" id="blog" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
-                                <img style="display:none;" id="2d" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
-                                <img style="display:none;" id="3d" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
-                                <img style="display:none;" id="4d" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
-                                <img style="display:none;" id="netw_analysis" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
+                                <img style="display:none;" id="commentary" onmouseover="showAape('commentary');" onmouseout="showAape('commentary');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
+                                <img style="display:none;" id="client_prod" onmouseover="showAape('client_prod');" onmouseout="showAape('client_prod');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
+                                <img style="display:none;" id="calendar" onmouseover="showAape('calendar');" onmouseout="showAape('calendar');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
+                                <img style="display:none;" id="sim" onmouseover="showAape('sim');" onmouseout="showAape('sim');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
+                                <img style="display:none;" id="blog" onmouseover="showAape('blog');" onmouseout="showAape('blog');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
+                                <img style="display:none;" id="2d" onmouseover="showAape('2d');" onmouseout="showAape('2d');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
+                                <img style="display:none;" id="3d" onmouseover="showAape('3d');" onmouseout="showAape('3d');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
+                                <img style="display:none;" id="4d" onmouseover="showAape('4d');" onmouseout="showAape('4d');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
+                                <img style="display:none;" id="netw_analysis" onmouseover="showAape('netw_analysis');" onmouseout="showAape('netw_analysis');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
                             </div>
                             <div class="ylw-line">
-                                <img style="display:none;" id="image" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
-                                <img style="display:none;" id="video" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
-                                <img style="display:none;" id="audio" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img style="display:none;" id="twitter" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
-                                <img style="display:none;" id="sms" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
-                                <img style="display:none;" id="email" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
-                                <img style="display:none;" id="rss" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
-                                <img style="display:none;" id="im" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
-                                <img style="display:none;" id="photoshare" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
+                                <img style="display:none;" id="image" onmouseover="showAape('image');" onmouseout="showAape('image');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
+                                <img style="display:none;" id="video" onmouseover="showAape('video');" onmouseout="showAape('video');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
+                                <img style="display:none;" id="audio" onmouseover="showAape('audio');" onmouseout="showAape('audio');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img style="display:none;" id="twitter" onmouseover="showAape('twitter');" onmouseout="showAape('twitter');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
+                                <img style="display:none;" id="sms" onmouseover="showAape('sms');" onmouseout="showAape('sms');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
+                                <img style="display:none;" id="email" onmouseover="showAape('email');" onmouseout="showAape('email');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
+                                <img style="display:none;" id="rss" onmouseover="showAape('rss');" onmouseout="showAape('rss');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
+                                <img style="display:none;" id="im" onmouseover="showAape('im');" onmouseout="showAape('im');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
+                                <img style="display:none;" id="photoshare" onmouseover="showAape('photoshare');" onmouseout="showAape('photoshare');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
                             </div>
                             <div class="red-line">
-                                <img style="display:none;" id="text" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
-                                <img style="display:none;" id="sketch" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
-                                <img style="display:none;" id="speech" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img style="display:none;" id="gesture" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
-                                <img style="display:none;" id="fax-2" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
-                                <img style="display:none;" id="mail" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
+                                <img style="display:none;" id="text" onmouseover="showAape('text');" onmouseout="showAape('text');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
+                                <img style="display:none;" id="sketch" onmouseover="showAape('sketch');" onmouseout="showAape('sketch');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
+                                <img style="display:none;" id="speech" onmouseover="showAape('speech');" onmouseout="showAape('speech');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img style="display:none;" id="gesture" onmouseover="showAape('gesture');" onmouseout="showAape('gesture');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
+                                <img style="display:none;" id="fax-2" onmouseover="showAape('fax');" onmouseout="showAape('fax');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img style="display:none;" id="mail" onmouseover="showAape('mail');" onmouseout="showAape('mail');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
                             </div>
                         </div>
                         
                         <div class="gold-standard">
-                            <div id="vw">VIEW</div>
-                            <div id="sh">SHARE</div>
-                            <div id="pub">PUBLISH</div>
-                            <div id="lnk">LINK</div>
-                            <div id="nt">NOTIFY</div>
-                            <div id="tr">TRACK</div>
-                            <div id="cap">CAPTURE</div>
-                            <div id="srt">SORT</div>
-                            <div id="srch">SEARCH</div>
-                            <div id="rt">RETRIEVE</div>
-                            <div id="vizc">VIZ-CONTENT</div>
-                            <div id="vizp">VIZ-PEOPLE</div>
-                            <div id="ctrl">CONTROL</div>
-                            <div id="nav">NAVIGATE</div>
-                            <div id="x">INTERACT</div>
-                            <div id="cocr">CO-CREATE</div>
-                            <div id="sns">SENSE</div>
+                            <div id="vw" class="gold-action">VIEW</div>
+                            <div id="sh" class="gold-action">SHARE</div>
+                            <div id="pub" class="gold-action">PUBLISH</div>
+                            <div id="lnk" class="gold-action">LINK</div>
+                            <div id="nt" class="gold-action">NOTIFY</div>
+                            <div id="tr" class="gold-action">TRACK</div>
+                            <div id="cap" class="gold-action">CAPTURE</div>
+                            <div id="srt" class="gold-action">SORT</div>
+                            <div id="srch" class="gold-action">SEARCH</div>
+                            <div id="rt" class="gold-action">RETRIEVE</div>
+                            <div id="vizc" class="gold-action">VIZ-CONTENT</div>
+                            <div id="vizp" class="gold-action">VIZ-PEOPLE</div>
+                            <div id="ctrl" class="gold-action">CONTROL</div>
+                            <div id="nav" class="gold-action">NAVIGATE</div>
+                            <div id="inter" class="gold-action">INTERACT</div>
+                            <div id="cocr" class="gold-action">CO-CREATE</div>
+                            <div id="sns" class="gold-action">SENSE</div>
                         </div>
                         
                         <div id="team-options">
                             <form>
-                                <p>You</p>
                                 <p> Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-1" onclick="ccDev('social','social');"/>Social Media</li>
                                     <li><input type="checkbox" name="video-1" onclick="ccDev('video','video');"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-1" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="office-1" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-1" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-1" onclick="ccDev('sketch','sketch');"/>Sketch</li>
                                     <li><input type="checkbox" name="cal-1" onclick="ccDev('cal','calendar');"/>Calendar</li>
@@ -478,7 +608,7 @@
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-2" onclick="ccDev('social','social');"/>Social Media</li>
                                     <li><input type="checkbox" name="video-2" onclick="ccDev('video','video');"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-2" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="office-2" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-2" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-2" onclick="ccDev('sketch','sketch');"/>Sketch</li>
                                     <li><input type="checkbox" name="cal-2" onclick="ccDev('cal','calendar');"/>Calendar</li>
@@ -494,7 +624,7 @@
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-3" onclick="ccDev('social','social');"/>Social Media</li>
                                     <li><input type="checkbox" name="video-3" onclick="ccDev('video','video');"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-3" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="office-3" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-3" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-3" onclick="ccDev('sketch','sketch');"/>Sketch</li>
                                     <li><input type="checkbox" name="cal-3" onclick="ccDev('cal','calendar');"/>Calendar</li>

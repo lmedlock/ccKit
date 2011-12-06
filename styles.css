@@ -240,7 +240,7 @@ footer a.up{
     float:left;
     list-style:none;
     font-size:16px;
-    width:225px;
+    width:200px;
     }
 
 #black-line{
@@ -290,7 +290,7 @@ footer a.up{
 #team-options{
     float:right;
     background-color:#424041;
-    width:150px;
+    width:140px;
     height:auto;
     padding:5px;
 }
@@ -298,32 +298,65 @@ footer a.up{
 .aware{
     color:white;
     background-color:#852F2A;
+    position:relative;
+    width:80px;
+    height:20px;
+    font-size:12px;
+    border: 1px solid black;
+    vertical-align:middle;
+    margin-left:10px;
+    text-align:center;
 }
 
 .attention{
-     color:white;
+    color:white;
     background-color:#F5B52C;
+    position:relative;
+    width:80px;
+    height:20px;
+    font-size:12px;
+    border: 1px solid black;
+    vertical-align:middle;
+    margin-left:10px;
+    text-align:center;
 }
 
 .participate{
-     color:white;
+    color:white;
     background-color:#2F4CF5;
+    position:relative;
+    width:80px;
+    height:20px;
+    font-size:12px;
+    border: 1px solid black;
+    vertical-align:middle;
+    margin-left:10px;
+    text-align:center;
 }
 
 .engage{
-     color:white;
-    background-color:#36A845;
+    color:white;
+    background-color:#36A845;position:relative;
+    width:80px;
+    height:20px;
+    font-size:12px;
+    border: 1px solid black;
+    vertical-align:middle;
+    margin-left:10px;
+    text-align:center;
 }
 
 .gold-standard{
     float:right;
 }
 
-#vw#sh#pub#lnk#nt#tr#cap#srt#srch#rt#vizc#vizp#ctrl#nav#x#cocr#sns{
+.gold-action {
 position:relative;
-width:40px;
+width:80px;
 height:20px;
-font-size:10px;
+font-size:12px;
 border: 1px solid black;
-text-align:right;
+vertical-align:middle;
+margin-left:10px;
+text-align:center;
 }
