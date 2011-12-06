@@ -24,7 +24,7 @@
                                 break;
                         };
                     
-                };
+                }
                 
                 function ccDev(name,id){
                     var number = $('input:checked[name*=' + name + ']').length;
@@ -43,12 +43,45 @@
                                 break;
                         };
                     
-                };
-                
+                }
+              
                 $(document).ready(function() {
+                        //var networks = ["'bt','bt_netw'","'gsm','gsm'","'3g4g','3g4g'","'wifi','wifi'","'lan','lan'","'wan','wan'","'sat','satellite'"];                        
                         ccNetw('bt','bt_netw');
-                    });
+                        ccNetw('gsm','gsm');
+                        ccNetw('3g4g','3g4g');
+                        ccNetw('wifi','wifi');
+                        ccNetw('lan','lan');
+                        ccNetw('wan','wan');
+                        ccNetw('sat','satellite');
+                        ccDev('smart','smartphone');
+                        ccDev('feature','feature');
+                        ccDev('gps','gps');
+                        ccDev('laptop','laptop');
+                        ccDev('touch','tablet_touch');
+                        ccDev('desktop','desktop');
+                        ccDev('local','local_lcd');
+                        ccDev('wall','wall');
+                        ccDev('board','bulletin');
+                        ccDev('digital-cam','digital_cam');
+                        ccDev('projector','projector');
+                        ccDev('whiteboard','whiteboard');
+                        ccDev('post-it','postnote');
+                        ccDev('video','video');
+                        ccDev('client_prod','client_prod');
+                        ccDev('text','text');
+                        ccDev('sketch','sketch');
+                        ccDev('cal','calendar');
+                        ccDev('fax','fax-2');
+                        ccDev('bookmark','bookmark');
+                        ccDev('sms','sms');
+                        ccDev('3d','3d');
+                        ccDev('email','email');
+                        ccDev('rss','rss');
+                        ccDev('im','im');
+                })
         </script>
+        
         <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <style type="text/css">
@@ -99,7 +132,7 @@
                             <ul>
                         </div>
                         <div id="black-line">
-                            <img style="display:none;" id="bt_netw" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/bt_netw.png"/>
+                            <img style="display:none;" id="bt_netw" src="http://ldt.stanford.edu/~lmedlock/icons/bt_netw.png"/>
                             <img style="display:none;" id="gsm" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/gsm.png"/>
                             <img style="display:none;" id="3g4g" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/3g4g.png"/>
                             <img style="display:none;" id="wifi" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/wifi.jpg"/>
@@ -109,7 +142,7 @@
                         </div>
                         <div id="team-options">
                             <form>
-                                <input type="checkbox" name="mydev"/> You </br>
+                                <!--input type="checkbox" name="mydev"/> You </br-->
                                 <input type="checkbox" name="netw-1"/> Team Member 1 </br>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="bt-1" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
@@ -123,22 +156,22 @@
                                 <input type="checkbox" name="netw-2"/> Team Member 2 </br>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="bt-2" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
-                                    <li><input type="checkbox" name="gsm-2" onclick="ccNetw();"/>GPRS/GSM</li>
-                                    <li><input type="checkbox" name="3g4g-2" onclick="ccNetw();"/>3G/4G</li>
-                                    <li><input type="checkbox" name="wifi-2" onclick="ccNetw();"/>WiFi</li>
-                                    <li><input type="checkbox" name="lan-2" onclick="ccNetw();"/>LAN</li>
-                                    <li><input type="checkbox" name="wan-2" onclick="ccNetw();"/>WAN</li>
-                                    <li><input type="checkbox" name="sat-2" onclick="ccNetw();"/>Satellite</li>
+                                    <li><input type="checkbox" name="gsm-2" onclick="ccNetw('gsm','gsm');"/>GPRS/GSM</li>
+                                    <li><input type="checkbox" name="3g4g-2" onclick="ccNetw('3g4g','3g4g');"/>3G/4G</li>
+                                    <li><input type="checkbox" name="wifi-2" onclick="ccNetw('wifi','wifi');"/>WiFi</li>
+                                    <li><input type="checkbox" name="lan-2" onclick="ccNetw('lan','lan');"/>LAN</li>
+                                    <li><input type="checkbox" name="wan-2" onclick="ccNetw('wan','wan');"/>WAN</li>
+                                    <li><input type="checkbox" name="sat-2" onclick="ccNetw('sat','satellite');"/>Satellite</li>
                                 </ul>
                                 <input type="checkbox" name="netw-3"/> Team Member 3 </br>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="bt-3" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
-                                    <li><input type="checkbox" name="gsm-3" onclick="ccNetw();"/>GPRS/GSM</li>
-                                    <li><input type="checkbox" name="3g4g-3" onclick="ccNetw();"/>3G/4G</li>
-                                    <li><input type="checkbox" name="wifi-3" onclick="ccNetw();"/>WiFi</li>
-                                    <li><input type="checkbox" name="lan-3" onclick="ccNetw();"/>LAN</li>
-                                    <li><input type="checkbox" name="wan-3" onclick="ccNetw();"/>WAN</li>
-                                    <li><input type="checkbox" name="sat-3" onclick="ccNetw();"/>Satellite</li>
+                                    <li><input type="checkbox" name="gsm-3" onclick="ccNetw('gsm','gsm');"/>GPRS/GSM</li>
+                                    <li><input type="checkbox" name="3g4g-3" onclick="ccNetw('3g4g','3g4g');"/>3G/4G</li>
+                                    <li><input type="checkbox" name="wifi-3" onclick="ccNetw('wifi','wifi');"/>WiFi</li>
+                                    <li><input type="checkbox" name="lan-3" onclick="ccNetw('lan','lan');"/>LAN</li>
+                                    <li><input type="checkbox" name="wan-3" onclick="ccNetw('wan','wan');"/>WAN</li>
+                                    <li><input type="checkbox" name="sat-3" onclick="ccNetw('sat','satellite');"/>Satellite</li>
                                 </ul>
                             </form>
                         </div>
@@ -153,160 +186,160 @@
                     <div class="articleBody clear">
                         <div class="dev-list">
                             <ul>
-                                <li>Sensor System</li>
-                                <li>Bluetooth Headset</li>
-                                <li>AR Smart Glasses</li>
-                                <li>Feature Phone</li>
-                                <li>Smart Phone</li>
-                                <li>GPS Tracker</li>
-                                <li>Eye Tracker</li>
-                                <li>Laptop Computer</li>
-                                <li>Touch Tablet</li>
-                                <li>eReader</li>
-                                <li>Tablet PC</li>
-                                <li>Desktop Computer</li>
-                                <li>Robot</li>
-                                <li>Kinect (mimicry)</li>
-                                <li>Local Display (LCD)</li>
-                                <li>Interactive Display (Smartboard)</li>
-                                <li>Large Display (Large LCD)</li>
-                                <li>XL Display (Telepresence)</li>
-                                <li>Global Display (Stadium Screen)</li>
-                                <li>iRoom</li>
-                                <li>Lab Equipment</li>
-                                <li>M3R</li>
-                                <li>Wall Space</li>
-                                <li>Post-It Notes/Notecards</li>
-                                <li>Notebook/MemoPad</li>
-                                <li>Bulletin Board</li>
-                                <li>Digital Camera</li>
-                                <li>Printer</li>
-                                <li>3D Printer</li>
-                                <li>Facsimile Machine</li>
-                                <li>Scanner</li>
-                                <li>WebCam</li>
-                                <li>Video Camera</li>
-                                <li>DVD Player</li>
-                                <li>MP3 Player</li>
-                                <li>Teleconference Phone</li>
-                                <li>Speakers</li>
-                                <li>Microphone</li>
-                                <li>Projector</li>
-                                <li>Projection Screen</li>
-                                <li>Whiteboard</li>
-                                <li>External HDD</li>
-                                <li>USB Memory Stick</li>
-                                <li>Voice Recorder</li>
-                                <li>Teleconference Headset</li>
-                                <li>Gaming Console</li>
+                                <li onclick="$('#sensor').toggle(); $(this).toggleClass('choice');">Sensor System</li>
+                                <li onclick="$('#bt').toggle(); $(this).toggleClass('choice');">Bluetooth Headset</li>
+                                <li onclick="$('#smart_glasses').toggle(); $(this).toggleClass('choice');">AR Smart Glasses</li>
+                                <li onclick="$('#feature').toggle(); $(this).toggleClass('choice');">Feature Phone</li>
+                                <li onclick="$('#smartphone').toggle(); $(this).toggleClass('choice');">Smart Phone</li>
+                                <li onclick="$('#gps').toggle(); $(this).toggleClass('choice');">GPS Tracker</li>
+                                <li onclick="$('#eye_tracker').toggle(); $(this).toggleClass('choice');">Eye Tracker</li>
+                                <li onclick="$('#laptop').toggle(); $(this).toggleClass('choice');">Laptop Computer</li>
+                                <li onclick="$('#tablet_touch').toggle(); $(this).toggleClass('choice');">Touch Tablet</li>
+                                <li onclick="$('#ereader').toggle(); $(this).toggleClass('choice');">eReader</li>
+                                <li onclick="$('#tablet_pc').toggle(); $(this).toggleClass('choice');">Tablet PC</li>
+                                <li onclick="$('#desktop').toggle(); $(this).toggleClass('choice');">Desktop Computer</li>
+                                <li onclick="$('#robot').toggle(); $(this).toggleClass('choice');">Robot</li>
+                                <li onclick="$('#kinect').toggle(); $(this).toggleClass('choice');">Kinect (mimicry)</li>
+                                <li onclick="$('#local_lcd').toggle(); $(this).toggleClass('choice');">Local Display (LCD)</li>
+                                <li onclick="$('#smartboard').toggle(); $(this).toggleClass('choice');">Interactive Display (Smartboard)</li>
+                                <li onclick="$('#large_lcd').toggle(); $(this).toggleClass('choice');">Large Display (Large LCD)</li>
+                                <li onclick="$('#xl_lcd').toggle(); $(this).toggleClass('choice');">XL Display (Telepresence)</li>
+                                <li onclick="$('#global_lcd').toggle(); $(this).toggleClass('choice');">Global Display (Stadium Screen)</li>
+                                <li onclick="$('#iroom').toggle(); $(this).toggleClass('choice');">iRoom</li>
+                                <li onclick="$('#lab').toggle(); $(this).toggleClass('choice');">Lab Equipment</li>
+                                <li onclick="$('#m3r').toggle(); $(this).toggleClass('choice');">M3R</li>
+                                <li onclick="$('#wall').toggle(); $(this).toggleClass('choice');">Wall Space</li>
+                                <li onclick="$('#postnote').toggle(); $(this).toggleClass('choice');">Post-It Notes/Notecards</li>
+                                <li onclick="$('#notebook').toggle(); $(this).toggleClass('choice');">Notebook/MemoPad</li>
+                                <li onclick="$('#bulletin').toggle(); $(this).toggleClass('choice');">Bulletin Board</li>
+                                <li onclick="$('#digital_cam').toggle(); $(this).toggleClass('choice');">Digital Camera</li>
+                                <li onclick="$('#printer').toggle(); $(this).toggleClass('choice');">Printer</li>
+                                <li onclick="$('#3d_printer').toggle(); $(this).toggleClass('choice');">3D Printer</li>
+                                <li onclick="$('#fax').toggle(); $(this).toggleClass('choice');">Facsimile Machine</li>
+                                <li onclick="$('#scanner').toggle(); $(this).toggleClass('choice');">Scanner</li>
+                                <li onclick="$('#webcam').toggle(); $(this).toggleClass('choice');">WebCam</li>
+                                <li onclick="$('#video_cam').toggle(); $(this).toggleClass('choice');">Video Camera</li>
+                                <li onclick="$('#dvd').toggle(); $(this).toggleClass('choice');">DVD Player</li>
+                                <li onclick="$('#mp3').toggle(); $(this).toggleClass('choice');">MP3 Player</li>
+                                <li onclick="$('#teleconf').toggle(); $(this).toggleClass('choice');">Teleconference Phone</li>
+                                <li onclick="$('#speakers').toggle(); $(this).toggleClass('choice');">Speakers</li>
+                                <li onclick="$('#mic').toggle(); $(this).toggleClass('choice');">Microphone</li>
+                                <li onclick="$('#projector').toggle(); $(this).toggleClass('choice');">Projector</li>
+                                <li onclick="$('#proj_screen').toggle(); $(this).toggleClass('choice');">Projection Screen</li>
+                                <li onclick="$('#whiteboard').toggle(); $(this).toggleClass('choice');">Whiteboard</li>
+                                <li onclick="$('#hdd').toggle(); $(this).toggleClass('choice');">External HDD</li>
+                                <li onclick="$('#usb').toggle(); $(this).toggleClass('choice');">USB Memory Stick</li>
+                                <li onclick="$('#voice_rec').toggle(); $(this).toggleClass('choice');">Voice Recorder</li>
+                                <li onclick="$('#headset').toggle(); $(this).toggleClass('choice');">Teleconference Headset</li>
+                                <li onclick="$('#gaming').toggle(); $(this).toggleClass('choice');">Gaming Console</li>
                             <ul>
                         </div>
                         <div class="aape-zones">
                             <div class="grn-line">
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sensor.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/smart_glasses.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/laptop.jpg"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/tablet_touch.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/tablet_pc.jpg"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/desktop.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/robot.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/kinect.jpg"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/smartboard.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/iroom.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/wall.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img style="display:none;" id="sensor" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sensor.png"/>
+                                <img style="display:none;" id="smart_glasses" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/smart_glasses.png"/>
+                                <img style="display:none;" id="laptop" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/laptop.jpg"/>
+                                <img style="display:none;" id="tablet_touch" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/tablet_touch.png"/>
+                                <img style="display:none;" id="tablet_pc" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/tablet_pc.jpg"/>
+                                <img style="display:none;" id="desktop" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/desktop.png"/>
+                                <img style="display:none;" id="robot" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/robot.png"/>
+                                <img style="display:none;" id="kinect" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/kinect.jpg"/>
+                                <img style="display:none;" id="smartboard" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/smartboard.png"/>
+                                <img style="display:none;" id="iroom" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/iroom.png"/>
+                                <img style="display:none;" id="m3r" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img style="display:none;" id="wall" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/wall.png"/>
+                                <img style="display:none;" id="gaming" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
                             </div>
                             <div class="blu-line">
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/whiteboard.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/postnote.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/smartphone.png"/>
+                                <img style="display:none;" id="whiteboard" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/whiteboard.png"/>
+                                <img style="display:none;" id="postnote" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/postnote.png"/>
+                                <img style="display:none;" id="smartphone" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/smartphone.png"/>
                             </div>
                             <div class="ylw-line">
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/usb.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/hdd.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d_printer.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/printer.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/projector.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/proj_screen.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bulletin.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/xl_lcd.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/eye_tracker.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/gps.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video_cam.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/lab.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/global_lcd.png"/>
+                                <img style="display:none;" id="usb" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/usb.png"/>
+                                <img style="display:none;" id="hdd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/hdd.png"/>
+                                <img style="display:none;" id="3d_printer" ="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/3d_printer.png"/>
+                                <img style="display:none;" id="printer" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/printer.png"/>
+                                <img style="display:none;" id="projector" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/projector.png"/>
+                                <img style="display:none;" id="proj_screen" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/proj_screen.png"/>
+                                <img style="display:none;" id="webcam" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                                <img style="display:none;" id="fax" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img style="display:none;" id="bulletin" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bulletin.png"/>
+                                <img style="display:none;" id="xl_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/xl_lcd.png"/>
+                                <img style="display:none;" id="eye_tracker" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/eye_tracker.png"/>
+                                <img style="display:none;" id="gps" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/gps.png"/>
+                                <img style="display:none;" id="video_cam" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/video_cam.png"/>
+                                <img style="display:none;" id="lab" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/lab.png"/>
+                                <img style="display:none;" id="global_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/global_lcd.png"/>
                             </div>
                             <div class="red-line">
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bt.jpg"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/feature.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/ereader.jpg"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/local_lcd.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/large_lcd.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/notebook.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/digital_cam.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/scanner.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/dvd.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/teleconf.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/speakers.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/mic.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/voice_rec.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/mp3.png"/>
-                                <img src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/headset.png"/>
+                                <img style="display:none;" id="bt" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/bt.jpg"/>
+                                <img style="display:none;" id="feature" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/feature.png"/>
+                                <img style="display:none;" id="ereader" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ereader.jpg"/>
+                                <img style="display:none;" id="local_lcd" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/local_lcd.png"/>
+                                <img style="display:none;" id="large_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/large_lcd.png"/>
+                                <img style="display:none;" id="notebook" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/notebook.png"/>
+                                <img style="display:none;" id="digital_cam" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/digital_cam.png"/>
+                                <img style="display:none;" id="scanner" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/scanner.png"/>
+                                <img style="display:none;" id="dvd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/dvd.png"/>
+                                <img style="display:none;" id="teleconf" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/teleconf.png"/>
+                                <img style="display:none;" id="speakers" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/speakers.png"/>
+                                <img style="display:none;" id="mic" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/mic.png"/>
+                                <img style="display:none;" id="voice_rec" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/voice_rec.png"/>
+                                <img style="display:none;" id="mp3" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/mp3.png"/>
+                                <img style="display:none;" id="headset" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/headset.png"/>
                             </div>
                         </div>
                         <div id="team-options">
                             <form>
-                                <input type="checkbox" name="mynetw"/> You </br>
-                                <input type="checkbox" name="dev-1"/> Team Member 1 </br>
+                                <!--input type="checkbox" name="mynetw"/> You </br-->
+                                <p>Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-1"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-1"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-1"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-1"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-1"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-1"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-1"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-1"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-1"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-1"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-1"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-1"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-1"/>Post-It Notes</li>
+                                    <li><input type="checkbox" name="smart-1" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
+                                    <li><input type="checkbox" name="feature-1" onclick="ccDev('feature','feature');"/>Feature Phone</li>
+                                    <li><input type="checkbox" name="gps-1" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
+                                    <li><input type="checkbox" name="laptop-1" onclick="ccDev('laptop','laptop');"/>Laptop</li>
+                                    <li><input type="checkbox" name="touch-1" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
+                                    <li><input type="checkbox" name="desktop-1" onclick="ccDev('desktop','desktop');"/>Desktop</li>
+                                    <li><input type="checkbox" name="local-1" onclick="ccDev('local','local_lcd');"/>Local Display</li>
+                                    <li><input type="checkbox" name="wall-1" onclick="ccDev('wall','wall');"/>Wall Space</li>
+                                    <li><input type="checkbox" name="board-1" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
+                                    <li><input type="checkbox" name="digital-cam-1" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
+                                    <li><input type="checkbox" name="projector-1" onclick="ccDev('projector','projector');"/>Projector</li>
+                                    <li><input type="checkbox" name="whiteboard-1" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
+                                    <li><input type="checkbox" name="post-it-1" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
                                 </ul>
-                                <input type="checkbox" name="dev-2"/> Team Member 2 </br>
+                                <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-2"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-2"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-2"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-2"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-2"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-2"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-2"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-2"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-2"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-2"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-2"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-2"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-2"/>Post-It Notes</li>
+                                    <li><input type="checkbox" name="smart-2" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
+                                    <li><input type="checkbox" name="feature-2" onclick="ccDev('feature','feature');"/>Feature Phone</li>
+                                    <li><input type="checkbox" name="gps-2" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
+                                    <li><input type="checkbox" name="laptop-2" onclick="ccDev('laptop','laptop');"/>Laptop</li>
+                                    <li><input type="checkbox" name="touch-2" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
+                                    <li><input type="checkbox" name="desktop-2" onclick="ccDev('desktop','desktop');"/>Desktop</li>
+                                    <li><input type="checkbox" name="local-2" onclick="ccDev('local','local_lcd');"/>Local Display</li>
+                                    <li><input type="checkbox" name="wall-2" onclick="ccDev('wall','wall');"/>Wall Space</li>
+                                    <li><input type="checkbox" name="board-2" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
+                                    <li><input type="checkbox" name="digital-cam-2" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
+                                    <li><input type="checkbox" name="projector-2" onclick="ccDev('projector','projector');"/>Projector</li>
+                                    <li><input type="checkbox" name="whiteboard-2" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
+                                    <li><input type="checkbox" name="post-it-2" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
                                 </ul>
-                                <input type="checkbox" name="dev-3"/> Team Member 3 </br>
+                                <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-3"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-3"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-3"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-3"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-3"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-3"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-3"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-3"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-3"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-3"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-3"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-3"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-3"/>Post-It Notes</li>
+                                    <li><input type="checkbox" name="smart-3" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
+                                    <li><input type="checkbox" name="feature-3" onclick="ccDev('feature','feature');"/>Feature Phone</li>
+                                    <li><input type="checkbox" name="gps-3" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
+                                    <li><input type="checkbox" name="laptop-3" onclick="ccDev('laptop','laptop');"/>Laptop</li>
+                                    <li><input type="checkbox" name="touch-3" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
+                                    <li><input type="checkbox" name="desktop-3" onclick="ccDev('desktop','desktop');"/>Desktop</li>
+                                    <li><input type="checkbox" name="local-3" onclick="ccDev('local','local_lcd');"/>Local Display</li>
+                                    <li><input type="checkbox" name="wall-3" onclick="ccDev('wall','wall');"/>Wall Space</li>
+                                    <li><input type="checkbox" name="board-3" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
+                                    <li><input type="checkbox" name="digital-cam-3" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
+                                    <li><input type="checkbox" name="projector-3" onclick="ccDev('projector','projector');"/>Projector</li>
+                                    <li><input type="checkbox" name="whiteboard-3" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
+                                    <li><input type="checkbox" name="post-it-3" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
                                 </ul>
                             </form>
                         </div>
@@ -321,97 +354,157 @@
                     <div class="articleBody clear">
                         <div class="tool-list">
                             <ul>
-                                <li>Games</li>
-                                <li>M3R</li>
-                                <li>Video/Web Conferencing</li>
-                                <li>Social Commentary (Open)</li>
-                                <li>Discussion Forum (focused)</li>
-                                <li>Cloud Productivity (GDocs)</li>
-                                <li>Wiki</li>
-                                <li>Client Productivity (MSOffice)</li>
-                                <li>Virtual Reality</li>
-                                <li>Augmented Reality</li>
-                                <li>Geolocation Service</li>
-                                <li>Text</li>
-                                <li>Sketch (analog)</li>
-                                <li>Calendar</li>
-                                <li>Speech (analog)</li>
-                                <li>Gestures (analog)</li>
-                                <li>[snail] Mail</li>
-                                <li>Simulator</li>
-                                <li>Digital Image</li>
-                                <li>Video</li>
-                                <li>Audio</li>
-                                <li>Individual Blog</li>
-                                <li>Bookmarking</li>
-                                <li>Twitter</li>
-                                <li>SMS</li>
-                                <li>2D Model</li>
-                                <li>3D Model</li>
-                                <li>4D Model</li>
-                                <li>Email</li>
-                                <li>RSS Feed</li>
-                                <li>Social Networking (e.g. FB)</li>
-                                <li>Instant Messaging</li>
-                                <li>Network Analysis</li>
+                                <li onclick="$('#gaming-2').toggle(); $(this).toggleClass('choice');">Games</li>
+                                <li onclick="$('#m3r-2').toggle(); $(this).toggleClass('choice');">M3R</li>
+                                <li onclick="$('#webcam-2').toggle(); $(this).toggleClass('choice');">Video/Web Conferencing</li>
+                                <li onclick="$('#commentary').toggle(); $(this).toggleClass('choice');">Social Commentary (Open)</li>
+                                <li onclick="$('#discussion').toggle(); $(this).toggleClass('choice');">Discussion Forum (focused)</li>
+                                <li onclick="$('#web_prod').toggle(); $(this).toggleClass('choice');">Cloud Productivity (GDocs)</li>
+                                <li onclick="$('#wiki').toggle(); $(this).toggleClass('choice');">Wiki</li>
+                                <li onclick="$('#client_prod').toggle(); $(this).toggleClass('choice');">Client Productivity (MSOffice)</li>
+                                <li onclick="$('#vr').toggle(); $(this).toggleClass('choice');">Virtual Reality</li>
+                                <li onclick="$('#ar').toggle(); $(this).toggleClass('choice');">Augmented Reality</li>
+                                <li onclick="$('#gelocation').toggle(); $(this).toggleClass('choice');">Geolocation Service</li>
+                                <li onclick="$('#text').toggle(); $(this).toggleClass('choice');">Text</li>
+                                <li onclick="$('#sketch').toggle(); $(this).toggleClass('choice');">Sketch (analog)</li>
+                                <li onclick="$('#calendar').toggle(); $(this).toggleClass('choice');">Calendar</li>
+                                <li onclick="$('#speech').toggle(); $(this).toggleClass('choice');">Speech (analog)</li>
+                                <li onclick="$('#gesture').toggle(); $(this).toggleClass('choice');">Gestures (analog)</li>
+                                <li onclick="$('#mail').toggle(); $(this).toggleClass('choice');">[snail] Mail</li>
+                                <li onclick="$('#sim').toggle(); $(this).toggleClass('choice');">Simulator</li>
+                                <li onclick="$('#image').toggle(); $(this).toggleClass('choice');">Digital Image</li>
+                                <li onclick="$('#video').toggle(); $(this).toggleClass('choice');">Video</li>
+                                <li onclick="$('#audio').toggle(); $(this).toggleClass('choice');">Audio</li>
+                                <li onclick="$('#blog').toggle(); $(this).toggleClass('choice');">Individual Blog</li>
+                                <li onclick="$('#bookmark').toggle(); $(this).toggleClass('choice');">Bookmarking</li>
+                                <li onclick="$('#twitter').toggle(); $(this).toggleClass('choice');">Twitter</li>
+                                <li onclick="$('#sms').toggle(); $(this).toggleClass('choice');">SMS</li>
+                                <li onclick="$('#2d').toggle(); $(this).toggleClass('choice');">2D Model</li>
+                                <li onclick="$('#3d').toggle(); $(this).toggleClass('choice');">3D Model</li>
+                                <li onclick="$('#4d').toggle(); $(this).toggleClass('choice');">4D Model</li>
+                                <li onclick="$('#email').toggle(); $(this).toggleClass('choice');">Email</li>
+                                <li onclick="$('#rss').toggle(); $(this).toggleClass('choice');">RSS Feed</li>
+                                <li onclick="$('#social').toggle(); $(this).toggleClass('choice');">Social Networking (e.g. FB)</li>
+                                <li onclick="$('#im').toggle(); $(this).toggleClass('choice');">Instant Messaging</li>
+                                <li onclick="$('#netw_analysis').toggle(); $(this).toggleClass('choice');">Network Analysis</li>
                             <ul>
                         </div>
                         <div class="aape-zones">
-                            <div class="red-line"></div>
-                            <div class="ylw-line"></div>
-                            <div class="blu-line"></div>
-                            <div class="grn-line"></div>
+                            <div class="grn-line">
+                                <img style="display:none;" id="gaming-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img style="display:none;" id="m3r-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img style="display:none;" id="ar" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
+                                <img style="display:none;" id="vr" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
+                                <img style="display:none;" id="bookmark" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
+                                <img style="display:none;" id="gelocation" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
+                                <img style="display:none;" id="social" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
+                                <img style="display:none;" id="web_prod" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
+                                <img style="display:none;" id="wiki" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
+                                <img style="display:none;" id="discussion" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
+                                <img style="display:none;" id="webcam-2" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                            </div>
+                            <div class="blu-line">
+                                <img style="display:none;" id="commentary" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
+                                <img style="display:none;" id="client_prod" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
+                                <img style="display:none;" id="calendar" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
+                                <img style="display:none;" id="sim" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
+                                <img style="display:none;" id="blog" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
+                                <img style="display:none;" id="2d" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
+                                <img style="display:none;" id="3d" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
+                                <img style="display:none;" id="4d" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
+                                <img style="display:none;" id="netw_analysis" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
+                            </div>
+                            <div class="ylw-line">
+                                <img style="display:none;" id="image" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
+                                <img style="display:none;" id="video" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
+                                <img style="display:none;" id="audio" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img style="display:none;" id="twitter" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
+                                <img style="display:none;" id="sms" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
+                                <img style="display:none;" id="email" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
+                                <img style="display:none;" id="rss" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
+                                <img style="display:none;" id="im" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
+                                <img style="display:none;" id="photoshare" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
+                            </div>
+                            <div class="red-line">
+                                <img style="display:none;" id="text" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
+                                <img style="display:none;" id="sketch" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
+                                <img style="display:none;" id="speech" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img style="display:none;" id="gesture" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
+                                <img style="display:none;" id="fax-2" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img style="display:none;" id="mail" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
+                            </div>
                         </div>
+                        
+                        <div class="gold-standard">
+                            <div id="vw">VIEW</div>
+                            <div id="sh">SHARE</div>
+                            <div id="pub">PUBLISH</div>
+                            <div id="lnk">LINK</div>
+                            <div id="nt">NOTIFY</div>
+                            <div id="tr">TRACK</div>
+                            <div id="cap">CAPTURE</div>
+                            <div id="srt">SORT</div>
+                            <div id="srch">SEARCH</div>
+                            <div id="rt">RETRIEVE</div>
+                            <div id="vizc">VIZ-CONTENT</div>
+                            <div id="vizp">VIZ-PEOPLE</div>
+                            <div id="ctrl">CONTROL</div>
+                            <div id="nav">NAVIGATE</div>
+                            <div id="x">INTERACT</div>
+                            <div id="cocr">CO-CREATE</div>
+                            <div id="sns">SENSE</div>
+                        </div>
+                        
                         <div id="team-options">
                             <form>
-                                <input type="checkbox" name="mynetw"/> You </br>
-                                <input type="checkbox" name="tool-1"/> Team Member 1 </br>
+                                <p>You</p>
+                                <p> Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-1"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-1"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-1"/>Client Productivity (MSOffice)</li>
-                                    <li><input type="checkbox" name="text-1"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-1"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-1"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-1"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-1"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-1"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-1"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-1"/>Email</li>
-                                    <li><input type="checkbox" name="rss-1"/>RSS</li>
-                                    <li><input type="checkbox" name="im-1"/>Instant Messaging</li>
+                                    <li><input type="checkbox" name="social-1" onclick="ccDev('social','social');"/>Social Media</li>
+                                    <li><input type="checkbox" name="video-1" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="office-1" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="text-1" onclick="ccDev('text','text');"/>Text</li>
+                                    <li><input type="checkbox" name="sketch-1" onclick="ccDev('sketch','sketch');"/>Sketch</li>
+                                    <li><input type="checkbox" name="cal-1" onclick="ccDev('cal','calendar');"/>Calendar</li>
+                                    <li><input type="checkbox" name="fax-1" onclick="ccDev('fax','fax-2');"/>Fax</li>
+                                    <li><input type="checkbox" name="bookmark-1" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
+                                    <li><input type="checkbox" name="sms-1" onclick="ccDev('sms','sms');"/>SMS</li>
+                                    <li><input type="checkbox" name="3d-1" onclick="ccDev('3d','3d');"/>3D Model</li>
+                                    <li><input type="checkbox" name="email-1" onclick="ccDev('email','email');"/>Email</li>
+                                    <li><input type="checkbox" name="rss-1" onclick="ccDev('rss','rss');"/>RSS</li>
+                                    <li><input type="checkbox" name="im-1" onclick="ccDev('im','im');"/>Instant Messaging</li>
                                 </ul>
-                                <input type="checkbox" name="tool-2"/> Team Member 2 </br>
+                                <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-2"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-2"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-2"/>Client Productivity (MSOffice)</li>
-                                    <li><input type="checkbox" name="text-2"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-2"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-2"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-2"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-2"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-2"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-2"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-2"/>Email</li>
-                                    <li><input type="checkbox" name="rss-2"/>RSS</li>
-                                    <li><input type="checkbox" name="im-2"/>Instant Messaging</li>
+                                    <li><input type="checkbox" name="social-2" onclick="ccDev('social','social');"/>Social Media</li>
+                                    <li><input type="checkbox" name="video-2" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="office-2" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="text-2" onclick="ccDev('text','text');"/>Text</li>
+                                    <li><input type="checkbox" name="sketch-2" onclick="ccDev('sketch','sketch');"/>Sketch</li>
+                                    <li><input type="checkbox" name="cal-2" onclick="ccDev('cal','calendar');"/>Calendar</li>
+                                    <li><input type="checkbox" name="fax-2" onclick="ccDev('fax','fax-2');"/>Fax</li>
+                                    <li><input type="checkbox" name="bookmark-2" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
+                                    <li><input type="checkbox" name="sms-2" onclick="ccDev('sms','sms');"/>SMS</li>
+                                    <li><input type="checkbox" name="3d-2" onclick="ccDev('3d','3d');"/>3D Model</li>
+                                    <li><input type="checkbox" name="email-2" onclick="ccDev('email','email');"/>Email</li>
+                                    <li><input type="checkbox" name="rss-2" onclick="ccDev('rss','rss');"/>RSS</li>
+                                    <li><input type="checkbox" name="im-2" onclick="ccDev('im','im');"/>Instant Messaging</li>
                                 </ul>
-                                <input type="checkbox" name="tool-3"/> Team Member 3 </br>
+                                <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-3"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-3"/>Video Conferencing</li>
-                                    <li><input type="checkbox" name="office-3"/>Client Productivity (MSOffice)</li>
-                                    <li><input type="checkbox" name="text-3"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-3"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-3"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-3"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-3"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-3"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-3"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-3"/>Email</li>
-                                    <li><input type="checkbox" name="rss-3"/>RSS</li>
-                                    <li><input type="checkbox" name="im-3"/>Instant Messaging</li>
+                                    <li><input type="checkbox" name="social-3" onclick="ccDev('social','social');"/>Social Media</li>
+                                    <li><input type="checkbox" name="video-3" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="office-3" onclick="ccDev('office','client_prod');"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" name="text-3" onclick="ccDev('text','text');"/>Text</li>
+                                    <li><input type="checkbox" name="sketch-3" onclick="ccDev('sketch','sketch');"/>Sketch</li>
+                                    <li><input type="checkbox" name="cal-3" onclick="ccDev('cal','calendar');"/>Calendar</li>
+                                    <li><input type="checkbox" name="fax-3" onclick="ccDev('fax','fax-2');"/>Fax</li>
+                                    <li><input type="checkbox" name="bookmark-3" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
+                                    <li><input type="checkbox" name="sms-3" onclick="ccDev('sms','sms');"/>SMS</li>
+                                    <li><input type="checkbox" name="3d-3" onclick="ccDev('3d','3d');"/>3D Model</li>
+                                    <li><input type="checkbox" name="email-3" onclick="ccDev('email','email');"/>Email</li>
+                                    <li><input type="checkbox" name="rss-3" onclick="ccDev('rss','rss');"/>RSS</li>
+                                    <li><input type="checkbox" name="im-3" onclick="ccDev('im','im');"/>Instant Messaging</li>
                                 </ul>
                             </form>
                         </div>

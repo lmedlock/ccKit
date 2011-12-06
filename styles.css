@@ -290,7 +290,40 @@ footer a.up{
 #team-options{
     float:right;
     background-color:#424041;
-    width:200px;
+    width:150px;
     height:auto;
     padding:5px;
+}
+
+.aware{
+    color:white;
+    background-color:#852F2A;
+}
+
+.attention{
+     color:white;
+    background-color:#F5B52C;
+}
+
+.participate{
+     color:white;
+    background-color:#2F4CF5;
+}
+
+.engage{
+     color:white;
+    background-color:#36A845;
+}
+
+.gold-standard{
+    float:right;
+}
+
+#vw#sh#pub#lnk#nt#tr#cap#srt#srch#rt#vizc#vizp#ctrl#nav#x#cocr#sns{
+position:relative;
+width:40px;
+height:20px;
+font-size:10px;
+border: 1px solid black;
+text-align:right;
 }
