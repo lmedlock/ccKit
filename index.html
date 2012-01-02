@@ -175,6 +175,10 @@
                         };
                     
                 }
+                
+                function stdTool(name){
+                    
+                    }
               
                 $(document).ready(function() {
                         //var networks = ["'bt','bt_netw'","'gsm','gsm'","'3g4g','3g4g'","'wifi','wifi'","'lan','lan'","'wan','wan'","'sat','satellite'"];                        
@@ -515,7 +519,7 @@
                                 <li onclick="$('#4d').toggle(); $(this).toggleClass('choice');">4D Model</li>
                                 <li onclick="$('#email').toggle(); $(this).toggleClass('choice');">Email</li>
                                 <li onclick="$('#rss').toggle(); $(this).toggleClass('choice');">RSS Feed</li>
-                                <li onclick="$('#social').toggle(); $(this).toggleClass('choice');">Social Networking (e.g. FB)</li>
+                                <li onclick="$('#social').toggle(); $(this).toggleClass('choice');">Social Media (e.g. FB)</li>
                                 <li onclick="$('#im').toggle(); $(this).toggleClass('choice');">Instant Messaging</li>
                                 <li onclick="$('#netw_analysis').toggle(); $(this).toggleClass('choice');">Network Analysis</li>
                             <ul>
@@ -525,47 +529,47 @@
                             
                             <!-- ADD TITLES TO ALL IMAGES!!!!! -->
                             
-                                <img title="gaming" style="display:none;" id="gaming-2" onmouseover="showAape('gaming');" onmouseout="showAape('gaming');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
-                                <img style="display:none;" id="m3r-2" onmouseover="showAape('m3r');" onmouseout="showAape('m3r');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
-                                <img style="display:none;" id="ar" onmouseover="showAape('ar');" onmouseout="showAape('ar');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
-                                <img style="display:none;" id="vr" onmouseover="showAape('vr');" onmouseout="showAape('vr');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
-                                <img style="display:none;" id="bookmark" onmouseover="showAape('bookmark');" onmouseout="showAape('bookmark');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
-                                <img style="display:none;" id="geolocation" onmouseover="showAape('geolocation');" onmouseout="showAape('geolocation');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
-                                <img style="display:none;" id="social" onmouseover="showAape('social');" onmouseout="showAape('social');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
-                                <img style="display:none;" id="web_prod" onmouseover="showAape('web_prod');" onmouseout="showAape('web_prod');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
-                                <img style="display:none;" id="wiki" onmouseover="showAape('wiki');" onmouseout="showAape('wiki');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
-                                <img style="display:none;" id="discussion" onmouseover="showAape('discussion');" onmouseout="showAape('discussion');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
-                                <img style="display:none;" id="webcam-2" onmouseover="showAape('webcam');" onmouseout="showAape('webcam');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                                <img title="Gaming" style="display:none;" id="gaming-2" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img title="M3R" style="display:none;" id="m3r-2" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img title="Augmented Reality" style="display:none;" onclick="$(this).toggleClass('glow');" id="ar" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
+                                <img title="Virtual Reality" style="display:none;" onclick="$(this).toggleClass('glow');" id="vr" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
+                                <img title="Bookmarking" style="display:none;" id="bookmark" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
+                                <img title="Geolocation" style="display:none;" id="geolocation" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
+                                <img title="Social Media" style="display:none;" id="social" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
+                                <img title="Web Productivity" style="display:none;" id="web_prod" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
+                                <img title="Discussion Forum" style="display:none;" id="discussion" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
+                                <img title="Wiki" style="display:none;" id="wiki" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
+                                <img title="WebCam" style="display:none;" id="webcam-2onclick="$(this).toggleClass('glow');" " src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
                             </div>
                             <div class="blu-line">
-                                <img style="display:none;" id="commentary" onmouseover="showAape('commentary');" onmouseout="showAape('commentary');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
-                                <img style="display:none;" id="client_prod" onmouseover="showAape('client_prod');" onmouseout="showAape('client_prod');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
-                                <img style="display:none;" id="calendar" onmouseover="showAape('calendar');" onmouseout="showAape('calendar');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
-                                <img style="display:none;" id="sim" onmouseover="showAape('sim');" onmouseout="showAape('sim');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
-                                <img style="display:none;" id="blog" onmouseover="showAape('blog');" onmouseout="showAape('blog');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
-                                <img style="display:none;" id="2d" onmouseover="showAape('2d');" onmouseout="showAape('2d');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
-                                <img style="display:none;" id="3d" onmouseover="showAape('3d');" onmouseout="showAape('3d');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
-                                <img style="display:none;" id="4d" onmouseover="showAape('4d');" onmouseout="showAape('4d');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
-                                <img style="display:none;" id="netw_analysis" onmouseover="showAape('netw_analysis');" onmouseout="showAape('netw_analysis');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
+                                <img title="Social Commentary" style="display:none;" id="commentary" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
+                                <img title="Client Productivity" style="display:none;" id="client_prod" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
+                                <img title="Calendar" style="display:none;" id="calendar" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
+                                <img title="Simulation" style="display:none;" id="sim" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
+                                <img title="Blog" style="display:none;" id="blog" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
+                                <img title="2D Modeling" style="display:none;" id="2d" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
+                                <img title="3D Modeling" style="display:none;" id="3d" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
+                                <img title="4D Modeling" style="display:none;" id="4d" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
+                                <img title="Network Analysis" style="display:none;" id="netw_analysis" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
                             </div>
                             <div class="ylw-line">
-                                <img style="display:none;" id="image" onmouseover="showAape('image');" onmouseout="showAape('image');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
-                                <img style="display:none;" id="video" onmouseover="showAape('video');" onmouseout="showAape('video');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
-                                <img style="display:none;" id="audio" onmouseover="showAape('audio');" onmouseout="showAape('audio');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img style="display:none;" id="twitter" onmouseover="showAape('twitter');" onmouseout="showAape('twitter');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
-                                <img style="display:none;" id="sms" onmouseover="showAape('sms');" onmouseout="showAape('sms');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
-                                <img style="display:none;" id="email" onmouseover="showAape('email');" onmouseout="showAape('email');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
-                                <img style="display:none;" id="rss" onmouseover="showAape('rss');" onmouseout="showAape('rss');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
-                                <img style="display:none;" id="im" onmouseover="showAape('im');" onmouseout="showAape('im');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
-                                <img style="display:none;" id="photoshare" onmouseover="showAape('photoshare');" onmouseout="showAape('photoshare');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
+                                <img title="Images" style="display:none;" id="image" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
+                                <img title="Video" style="display:none;" id="video" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
+                                <img title="Audio" style="display:none;" id="audio" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img title="Twitter" style="display:none;" id="twitter" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
+                                <img title="SMS" style="display:none;" id="sms" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
+                                <img title="Email" style="display:none;" id="email" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
+                                <img title="RSS" style="display:none;" id="rss" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
+                                <img title="Instant Messaging" style="display:none;" id="im" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
+                                <img title="Photo Sharing" style="display:none;" id="photoshare" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
                             </div>
                             <div class="red-line">
-                                <img style="display:none;" id="text" onmouseover="showAape('text');" onmouseout="showAape('text');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
-                                <img style="display:none;" id="sketch" onmouseover="showAape('sketch');" onmouseout="showAape('sketch');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
-                                <img style="display:none;" id="speech" onmouseover="showAape('speech');" onmouseout="showAape('speech');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img style="display:none;" id="gesture" onmouseover="showAape('gesture');" onmouseout="showAape('gesture');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
-                                <img style="display:none;" id="fax-2" onmouseover="showAape('fax');" onmouseout="showAape('fax');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
-                                <img style="display:none;" id="mail" onmouseover="showAape('mail');" onmouseout="showAape('mail');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
+                                <img title="Text" style="display:none;" id="text"  onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
+                                <img title="Sketch" style="display:none;" id="sketch" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
+                                <img title="Speech" style="display:none;" id="speech" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img title="Gestures" style="display:none;" id="gesture" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
+                                <img title="Facsimile" style="display:none;" id="fax-2" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img title="Mail" style="display:none;" id="mail" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
                             </div>
                         </div>
                         
@@ -594,7 +598,7 @@
                                 <p> Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-1" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-1" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="videoconf-1" onclick="ccDev('video','video');"/>Video</li>
                                     <li><input type="checkbox" name="office-1" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-1" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-1" onclick="ccDev('sketch','sketch');"/>Sketch</li>
@@ -610,7 +614,7 @@
                                 <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-2" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-2" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="video-2" onclick="ccDev('video','video');"/>Video</li>
                                     <li><input type="checkbox" name="office-2" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-2" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-2" onclick="ccDev('sketch','sketch');"/>Sketch</li>
@@ -626,7 +630,7 @@
                                 <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
                                     <li><input type="checkbox" name="social-3" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-3" onclick="ccDev('video','video');"/>Video Conferencing</li>
+                                    <li><input type="checkbox" name="video-3" onclick="ccDev('video','video');"/>Video</li>
                                     <li><input type="checkbox" name="office-3" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
                                     <li><input type="checkbox" name="text-3" onclick="ccDev('text','text');"/>Text</li>
                                     <li><input type="checkbox" name="sketch-3" onclick="ccDev('sketch','sketch');"/>Sketch</li>

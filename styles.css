@@ -360,3 +360,10 @@ vertical-align:middle;
 margin-left:10px;
 text-align:center;
 }
+
+.glow
+{
+    -moz-box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px #fff;
+    box-shadow: 0px 0px 5px #fff;
+}
