@@ -138,7 +138,30 @@
                         };  
                 }
                 
-                function ccNetw(name,id){
+                
+                function ccBits(name,id){
+                    var number = $('input:checked[name*=' + name + ']').length;
+                    switch(number){
+                        case 0: $('#' + id).css("width","40px");
+                                $('#' + id).css("height","40px");
+                                break;
+                        case 1: $('#' + id).css("width","52px");
+                                $('#' + id).css("height","52px");
+                                break;
+                        case 2: $('#' + id).css("width","65px");
+                                $('#' + id).css("height","65px");
+                                break;
+                        case 3: $('#' + id).css("width","80px");
+                                $('#' + id).css("height","80px");
+                                break;
+                        };
+                    
+                }
+                
+                
+                //replaced ccNetw and ccDef functions with generic ccBits function
+                
+                /*function ccNetw(name,id){
                     var number = $('input:checked[name*=' + name + ']').length;
                     switch(number){
                         case 0: $('#' + id).css("width","25px");
@@ -215,7 +238,7 @@
                         ccDev('email','email');
                         ccDev('rss','rss');
                         ccDev('im','im');
-                })
+                })*/
         </script>
         
         <!--[if IE]>
@@ -268,46 +291,46 @@
                             <ul>
                         </div>
                         <div id="black-line">
-                            <img style="display:none;" id="bt_netw" src="http://ldt.stanford.edu/~lmedlock/icons/bt_netw.png"/>
-                            <img style="display:none;" id="gsm" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/gsm.png"/>
-                            <img style="display:none;" id="3g4g" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/3g4g.png"/>
-                            <img style="display:none;" id="wifi" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/wifi.jpg"/>
-                            <img style="display:none;" id="lan" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/lan.png"/>
-                            <img style="display:none;" id="wan" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/wan.jpg"/>
-                            <img style="display:none;" id="satellite" src="http://src.sencha.io/100/http://ldt.stanford.edu/~lmedlock/icons/satellite.png"/>
+                            <img style="display:none;" class="initSize" id="bt_netw" src="http://ldt.stanford.edu/~lmedlock/icons/bt_netw.png"/>
+                            <img style="display:none;" class="initSize" id="gsm" src="http://ldt.stanford.edu/~lmedlock/icons/gsm.png"/>
+                            <img style="display:none;" class="initSize" id="3g4g" src="http://ldt.stanford.edu/~lmedlock/icons/3g4g.png"/>
+                            <img style="display:none;" class="initSize" id="wifi" src="http://ldt.stanford.edu/~lmedlock/icons/wifi.jpg"/>
+                            <img style="display:none;" class="initSize" id="lan" src="http://ldt.stanford.edu/~lmedlock/icons/lan.png"/>
+                            <img style="display:none;" class="initSize" id="wan" src="http://ldt.stanford.edu/~lmedlock/icons/wan.jpg"/>
+                            <img style="display:none;" class="initSize" id="satellite" src="http://ldt.stanford.edu/~lmedlock/icons/satellite.png"/>
                         </div>
-                        <div id="team-options">
+                        <div class="team-options">
                             <form>
                                 <!--input type="checkbox" name="mydev"/> You </br-->
-                                <input type="checkbox" name="netw-1"/> Team Member 1 </br>
+                                <p/>Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="bt-1" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
-                                    <li><input type="checkbox" name="gsm-1" onclick="ccNetw('gsm','gsm');"/>GPRS/GSM</li>
-                                    <li><input type="checkbox" name="3g4g-1" onclick="ccNetw('3g4g','3g4g');"/>3G/4G</li>
-                                    <li><input type="checkbox" name="wifi-1" onclick="ccNetw('wifi','wifi');"/>WiFi</li>
-                                    <li><input type="checkbox" name="lan-1" onclick="ccNetw('lan','lan');"/>LAN</li>
-                                    <li><input type="checkbox" name="wan-1" onclick="ccNetw('wan','wan');"/>WAN</li>
-                                    <li><input type="checkbox" name="sat-1" onclick="ccNetw('sat','satellite');"/>Satellite</li>
+                                    <li><input type="checkbox" name="bt-1" onclick="ccBits('bt','bt_netw');"/>Bluetooth</li>
+                                    <li><input type="checkbox" name="gsm-1" onclick="ccBits('gsm','gsm');"/>GPRS/GSM</li>
+                                    <li><input type="checkbox" name="3g4g-1" onclick="ccBits('3g4g','3g4g');"/>3G/4G</li>
+                                    <li><input type="checkbox" name="wifi-1" onclick="ccBits('wifi','wifi');"/>WiFi</li>
+                                    <li><input type="checkbox" name="lan-1" onclick="ccBits('lan','lan');"/>LAN</li>
+                                    <li><input type="checkbox" name="wan-1" onclick="ccBits('wan','wan');"/>WAN</li>
+                                    <li><input type="checkbox" name="sat-1" onclick="ccBits('sat','satellite');"/>Satellite</li>
                                 </ul>
-                                <input type="checkbox" name="netw-2"/> Team Member 2 </br>
+                                <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="bt-2" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
-                                    <li><input type="checkbox" name="gsm-2" onclick="ccNetw('gsm','gsm');"/>GPRS/GSM</li>
-                                    <li><input type="checkbox" name="3g4g-2" onclick="ccNetw('3g4g','3g4g');"/>3G/4G</li>
-                                    <li><input type="checkbox" name="wifi-2" onclick="ccNetw('wifi','wifi');"/>WiFi</li>
-                                    <li><input type="checkbox" name="lan-2" onclick="ccNetw('lan','lan');"/>LAN</li>
-                                    <li><input type="checkbox" name="wan-2" onclick="ccNetw('wan','wan');"/>WAN</li>
-                                    <li><input type="checkbox" name="sat-2" onclick="ccNetw('sat','satellite');"/>Satellite</li>
+                                    <li><input type="checkbox" name="bt-2" onclick="ccBits('bt','bt_netw');"/>Bluetooth</li>
+                                    <li><input type="checkbox" name="gsm-2" onclick="ccBits('gsm','gsm');"/>GPRS/GSM</li>
+                                    <li><input type="checkbox" name="3g4g-2" onclick="ccBits('3g4g','3g4g');"/>3G/4G</li>
+                                    <li><input type="checkbox" name="wifi-2" onclick="ccBits('wifi','wifi');"/>WiFi</li>
+                                    <li><input type="checkbox" name="lan-2" onclick="ccBits('lan','lan');"/>LAN</li>
+                                    <li><input type="checkbox" name="wan-2" onclick="ccBits('wan','wan');"/>WAN</li>
+                                    <li><input type="checkbox" name="sat-2" onclick="ccBits('sat','satellite');"/>Satellite</li>
                                 </ul>
-                                <input type="checkbox" name="netw-3"/> Team Member 3 </br>
+                                <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="bt-3" onclick="ccNetw('bt','bt_netw');"/>Bluetooth</li>
-                                    <li><input type="checkbox" name="gsm-3" onclick="ccNetw('gsm','gsm');"/>GPRS/GSM</li>
-                                    <li><input type="checkbox" name="3g4g-3" onclick="ccNetw('3g4g','3g4g');"/>3G/4G</li>
-                                    <li><input type="checkbox" name="wifi-3" onclick="ccNetw('wifi','wifi');"/>WiFi</li>
-                                    <li><input type="checkbox" name="lan-3" onclick="ccNetw('lan','lan');"/>LAN</li>
-                                    <li><input type="checkbox" name="wan-3" onclick="ccNetw('wan','wan');"/>WAN</li>
-                                    <li><input type="checkbox" name="sat-3" onclick="ccNetw('sat','satellite');"/>Satellite</li>
+                                    <li><input type="checkbox" name="bt-3" onclick="ccBits('bt','bt_netw');"/>Bluetooth</li>
+                                    <li><input type="checkbox" name="gsm-3" onclick="ccBits('gsm','gsm');"/>GPRS/GSM</li>
+                                    <li><input type="checkbox" name="3g4g-3" onclick="ccBits('3g4g','3g4g');"/>3G/4G</li>
+                                    <li><input type="checkbox" name="wifi-3" onclick="ccBits('wifi','wifi');"/>WiFi</li>
+                                    <li><input type="checkbox" name="lan-3" onclick="ccBits('lan','lan');"/>LAN</li>
+                                    <li><input type="checkbox" name="wan-3" onclick="ccBits('wan','wan');"/>WAN</li>
+                                    <li><input type="checkbox" name="sat-3" onclick="ccBits('sat','satellite');"/>Satellite</li>
                                 </ul>
                             </form>
                         </div>
@@ -372,110 +395,209 @@
                         </div>
                         <div class="aape-zones">
                             <div class="grn-line">
-                                <img style="display:none;" id="sensor" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sensor.png"/>
-                                <img style="display:none;" id="smart_glasses" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/smart_glasses.png"/>
-                                <img style="display:none;" id="laptop" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/laptop.jpg"/>
-                                <img style="display:none;" id="tablet_touch" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/tablet_touch.png"/>
-                                <img style="display:none;" id="tablet_pc" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/tablet_pc.jpg"/>
-                                <img style="display:none;" id="desktop" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/desktop.png"/>
-                                <img style="display:none;" id="robot" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/robot.png"/>
-                                <img style="display:none;" id="kinect" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/kinect.jpg"/>
-                                <img style="display:none;" id="smartboard" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/smartboard.png"/>
-                                <img style="display:none;" id="iroom" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/iroom.png"/>
-                                <img style="display:none;" id="m3r" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
-                                <img style="display:none;" id="wall" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/wall.png"/>
-                                <img style="display:none;" id="gaming" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img style="display:none;" class="initSize" id="sensor" src="http://ldt.stanford.edu/~lmedlock/icons/sensor.png"/>
+                                <img style="display:none;" class="initSize" id="smart_glasses" src="http://ldt.stanford.edu/~lmedlock/icons/smart_glasses.png"/>
+                                <img style="display:none;" class="initSize" id="laptop" src="http://ldt.stanford.edu/~lmedlock/icons/laptop.jpg"/>
+                                <img style="display:none;" class="initSize" id="tablet_touch" src="http://ldt.stanford.edu/~lmedlock/icons/tablet_touch.png"/>
+                                <img style="display:none;" class="initSize" id="tablet_pc" src="http://ldt.stanford.edu/~lmedlock/icons/tablet_pc.jpg"/>
+                                <img style="display:none;" class="initSize" id="desktop" src="http://ldt.stanford.edu/~lmedlock/icons/desktop.png"/>
+                                <img style="display:none;" class="initSize" id="robot" src="http://ldt.stanford.edu/~lmedlock/icons/robot.png"/>
+                                <img style="display:none;" class="initSize" id="kinect" src="http://ldt.stanford.edu/~lmedlock/icons/kinect.jpg"/>
+                                <img style="display:none;" class="initSize" id="smartboard" src="http://ldt.stanford.edu/~lmedlock/icons/smartboard.png"/>
+                                <img style="display:none;" class="initSize" id="iroom" src="http://ldt.stanford.edu/~lmedlock/icons/iroom.png"/>
+                                <img style="display:none;" class="initSize" id="m3r" src="http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img style="display:none;" class="initSize" id="wall" src="http://ldt.stanford.edu/~lmedlock/icons/wall.png"/>
+                                <img style="display:none;" class="initSize" id="gaming" src="http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
                             </div>
                             <div class="blu-line">
-                                <img style="display:none;" id="whiteboard" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/whiteboard.png"/>
-                                <img style="display:none;" id="postnote" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/postnote.png"/>
-                                <img style="display:none;" id="smartphone" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/smartphone.png"/>
+                                <img style="display:none;" class="initSize" id="whiteboard" src="http://ldt.stanford.edu/~lmedlock/icons/whiteboard.png"/>
+                                <img style="display:none;" class="initSize" id="postnote" src="http://ldt.stanford.edu/~lmedlock/icons/postnote.png"/>
+                                <img style="display:none;" class="initSize" id="smartphone" src="http://ldt.stanford.edu/~lmedlock/icons/smartphone.png"/>
                             </div>
                             <div class="ylw-line">
-                                <img style="display:none;" id="usb" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/usb.png"/>
-                                <img style="display:none;" id="hdd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/hdd.png"/>
-                                <img style="display:none;" id="3d_printer" ="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/3d_printer.png"/>
-                                <img style="display:none;" id="printer" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/printer.png"/>
-                                <img style="display:none;" id="projector" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/projector.png"/>
-                                <img style="display:none;" id="proj_screen" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/proj_screen.png"/>
-                                <img style="display:none;" id="webcam" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
-                                <img style="display:none;" id="fax" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
-                                <img style="display:none;" id="bulletin" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bulletin.png"/>
-                                <img style="display:none;" id="xl_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/xl_lcd.png"/>
-                                <img style="display:none;" id="eye_tracker" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/eye_tracker.png"/>
-                                <img style="display:none;" id="gps" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/gps.png"/>
-                                <img style="display:none;" id="video_cam" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/video_cam.png"/>
-                                <img style="display:none;" id="lab" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/lab.png"/>
-                                <img style="display:none;" id="global_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/global_lcd.png"/>
+                                <img style="display:none;" class="initSize" id="usb" src="http://ldt.stanford.edu/~lmedlock/icons/usb.png"/>
+                                <img style="display:none;" class="initSize" id="hdd" src="http://ldt.stanford.edu/~lmedlock/icons/hdd.png"/>
+                                <img style="display:none;" class="initSize" id="3d_printer" ="http://ldt.stanford.edu/~lmedlock/icons/3d_printer.png"/>
+                                <img style="display:none;" class="initSize" id="printer" src="http://ldt.stanford.edu/~lmedlock/icons/printer.png"/>
+                                <img style="display:none;" class="initSize" id="projector" src="http://ldt.stanford.edu/~lmedlock/icons/projector.png"/>
+                                <img style="display:none;" class="initSize" id="proj_screen" src="http://ldt.stanford.edu/~lmedlock/icons/proj_screen.png"/>
+                                <img style="display:none;" class="initSize" id="webcam" src="http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                                <img style="display:none;" class="initSize" id="fax" src="http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img style="display:none;" class="initSize" id="bulletin" src="http://ldt.stanford.edu/~lmedlock/icons/bulletin.png"/>
+                                <img style="display:none;" class="initSize" id="xl_lcd" src="http://ldt.stanford.edu/~lmedlock/icons/xl_lcd.png"/>
+                                <img style="display:none;" class="initSize" id="eye_tracker" src="http://ldt.stanford.edu/~lmedlock/icons/eye_tracker.png"/>
+                                <img style="display:none;" class="initSize" id="gps" src="http://ldt.stanford.edu/~lmedlock/icons/gps.png"/>
+                                <img style="display:none;" class="initSize" id="video_cam" src="http://ldt.stanford.edu/~lmedlock/icons/video_cam.png"/>
+                                <img style="display:none;" class="initSize" id="lab" src="http://ldt.stanford.edu/~lmedlock/icons/lab.png"/>
+                                <img style="display:none;" class="initSize" id="global_lcd" src="http://ldt.stanford.edu/~lmedlock/icons/global_lcd.png"/>
                             </div>
                             <div class="red-line">
-                                <img style="display:none;" id="bt" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/bt.jpg"/>
-                                <img style="display:none;" id="feature" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/feature.png"/>
-                                <img style="display:none;" id="ereader" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ereader.jpg"/>
-                                <img style="display:none;" id="local_lcd" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/local_lcd.png"/>
-                                <img style="display:none;" id="large_lcd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/large_lcd.png"/>
-                                <img style="display:none;" id="notebook" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/notebook.png"/>
-                                <img style="display:none;" id="digital_cam" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/digital_cam.png"/>
-                                <img style="display:none;" id="scanner" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/scanner.png"/>
-                                <img style="display:none;" id="dvd" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/dvd.png"/>
-                                <img style="display:none;" id="teleconf" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/teleconf.png"/>
-                                <img style="display:none;" id="speakers" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/speakers.png"/>
-                                <img style="display:none;" id="mic" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/mic.png"/>
-                                <img style="display:none;" id="voice_rec" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/voice_rec.png"/>
-                                <img style="display:none;" id="mp3" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/mp3.png"/>
-                                <img style="display:none;" id="headset" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/headset.png"/>
+                                <img style="display:none;" class="initSize" id="bt" src="http://ldt.stanford.edu/~lmedlock/icons/bt.jpg"/>
+                                <img style="display:none;" class="initSize" id="feature" src="http://ldt.stanford.edu/~lmedlock/icons/feature.png"/>
+                                <img style="display:none;" class="initSize" id="ereader" src="http://ldt.stanford.edu/~lmedlock/icons/ereader.jpg"/>
+                                <img style="display:none;" class="initSize" id="local_lcd" src="http://ldt.stanford.edu/~lmedlock/icons/local_lcd.png"/>
+                                <img style="display:none;" class="initSize" id="large_lcd" src="http://ldt.stanford.edu/~lmedlock/icons/large_lcd.png"/>
+                                <img style="display:none;" class="initSize" id="notebook" src="http://ldt.stanford.edu/~lmedlock/icons/notebook.png"/>
+                                <img style="display:none;" class="initSize" id="digital_cam" src="http://ldt.stanford.edu/~lmedlock/icons/digital_cam.png"/>
+                                <img style="display:none;" class="initSize" id="scanner" src="http://ldt.stanford.edu/~lmedlock/icons/scanner.png"/>
+                                <img style="display:none;" class="initSize" id="dvd" src="http://ldt.stanford.edu/~lmedlock/icons/dvd.png"/>
+                                <img style="display:none;" class="initSize" id="teleconf" src="http://ldt.stanford.edu/~lmedlock/icons/teleconf.png"/>
+                                <img style="display:none;" class="initSize" id="speakers" src="http://ldt.stanford.edu/~lmedlock/icons/speakers.png"/>
+                                <img style="display:none;" class="initSize" id="mic" src="http://ldt.stanford.edu/~lmedlock/icons/mic.png"/>
+                                <img style="display:none;" class="initSize" id="voice_rec" src="http://ldt.stanford.edu/~lmedlock/icons/voice_rec.png"/>
+                                <img style="display:none;" class="initSize" id="mp3" src="http://ldt.stanford.edu/~lmedlock/icons/mp3.png"/>
+                                <img style="display:none;" class="initSize" id="headset" src="http://ldt.stanford.edu/~lmedlock/icons/headset.png"/>
                             </div>
                         </div>
-                        <div id="team-options">
+                        <div class="team-options">
                             <form>
                                 <!--input type="checkbox" name="mynetw"/> You </br-->
                                 <p>Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-1" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-1" onclick="ccDev('feature','feature');"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-1" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-1" onclick="ccDev('laptop','laptop');"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-1" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-1" onclick="ccDev('desktop','desktop');"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-1" onclick="ccDev('local','local_lcd');"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-1" onclick="ccDev('wall','wall');"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-1" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-1" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-1" onclick="ccDev('projector','projector');"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-1" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-1" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
+                                    <li><input type="checkbox" onclick="ccBits('sensor','sensor');" name="sensor-1"/>Sensor System</li>
+                            		<li><input type="checkbox" onclick="ccBits('bt','bt');" name="bt-1"/>Bluetooth Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('smart-glasses','smart_glasses');" name="smart-glasses-1"/>AR Smart Glasses</li>
+                        			<li><input type="checkbox" onclick="ccBits('feature','feature');" name="feature-1"/>Feature Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartphone','smartphone');" name="smartphone-1"/>Smart Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('gps','gps');" name="gps-1"/>GPS Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('eye-tracker','eye_tracker');" name="eye-tracker-1"/>Eye Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('laptop','laptop');" name="laptop-1"/>Laptop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-touch','tablet_touch');" name="tablet-touch-1"/>Touch Tablet</li>
+                        			<li><input type="checkbox" onclick="ccBits('ereader','ereader');" name="ereader-1"/>eReader</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-pc','tablet_pc');" name="tablet-pc-1"/>Tablet PC</li>
+                        			<li><input type="checkbox" onclick="ccBits('desktop','desktop');" name="desktop-1"/>Desktop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('robot','robot');" name="robot-1"/>Robot</li>
+                        			<li><input type="checkbox" onclick="ccBits('kinect','kinect');" name="kinect-1"/>Kinect (mimicry)</li>
+                        			<li><input type="checkbox" onclick="ccBits('local-lcd','local_lcd');" name="local-lcd-1"/>Local Display (LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartboard','smartboard');" name="smartboard-1"/>Interactive Display (Smartboard)</li>
+                        			<li><input type="checkbox" onclick="ccBits('large-lcd','large_lcd');" name="large-lcd-1"/>Large Display (Large LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('xl-lcd','xl_lcd');" name="xl-lcd-1"/>XL Display (Telepresence)</li>
+                        			<li><input type="checkbox" onclick="ccBits('global-lcd','global_lcd');" name="global-lcd-1"/>Global Display (Stadium Screen)</li>
+                        			<li><input type="checkbox" onclick="ccBits('iroom','iroom');" name="iroom-1"/>iRoom</li>
+                        			<li><input type="checkbox" onclick="ccBits('lab','lab');" name="lab-1"/>Lab Equipment</li>
+                        			<li><input type="checkbox" onclick="ccBits('m3r','m3r');" name="m3r-1"/>M3R</li>
+                        			<li><input type="checkbox" onclick="ccBits('wall','wall');" name="wall-1"/>Wall Space</li>
+                        			<li><input type="checkbox" onclick="ccBits('postnote','postnote');" name="postnote-1"/>Post-It Notes/Notecards</li>
+                        			<li><input type="checkbox" onclick="ccBits('notebook','notebook');" name="notebook-1"/>Notebook/MemoPad</li>
+                        			<li><input type="checkbox" onclick="ccBits('bulletin','bulletin');" name="bulletin-1"/>Bulletin Board</li>
+                        			<li><input type="checkbox" onclick="ccBits('digital-cam','digital_cam');" name="digital-cam-1"/>Digital Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('printer','printer');" name="printer-1"/>Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('3d-printer','3d_printer');" name="3d-printer-1"/>3D Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('fax','fax');" name="fax-1"/>Facsimile Machine</li>
+                        			<li><input type="checkbox" onclick="ccBits('scanner','scanner');" name="scanner-1"/>Scanner</li>
+                        			<li><input type="checkbox" onclick="ccBits('webcam','webcam');" name="webcam-1"/>WebCam</li>
+                        			<li><input type="checkbox" onclick="ccBits('video-cam','video_cam');" name="video-cam-1"/>Video Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('dvd','dvd');" name="dvd-1"/>DVD Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('mp3','mp3');" name="mp3-1"/>MP3 Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('teleconf','teleconf');" name="teleconf-1"/>Teleconference Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('speakers','speakers');" name="speakers-1"/>Speakers</li>
+                        			<li><input type="checkbox" onclick="ccBits('mic','mic');" name="mic-1"/>Microphone</li>
+                        			<li><input type="checkbox" onclick="ccBits('projector','projector');" name="projector-1"/>Projector</li>
+                        			<li><input type="checkbox" onclick="ccBits('proj-screen','proj_screen');" name="proj-screen-1"/>Projection Screen</li>
+                        			<li><input type="checkbox" onclick="ccBits('whiteboard','whiteboard');" name="whiteboard-1"/>Whiteboard</li>
+                        			<li><input type="checkbox" onclick="ccBits('hdd','hdd');" name="hdd-1"/>External HDD</li>
+                        			<li><input type="checkbox" onclick="ccBits('usb','usb');" name="usb-1"/>USB Memory Stick</li>
+                        			<li><input type="checkbox" onclick="ccBits('voice-rec','voice_rec');" name="voice-rec-1"/>Voice Recorder</li>
+                        			<li><input type="checkbox" onclick="ccBits('headset','headset');" name="headset-1"/>Teleconference Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('gaming','gaming');" name="gaming-1"/>Gaming Console</li>
                                 </ul>
                                 <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-2" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-2" onclick="ccDev('feature','feature');"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-2" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-2" onclick="ccDev('laptop','laptop');"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-2" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-2" onclick="ccDev('desktop','desktop');"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-2" onclick="ccDev('local','local_lcd');"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-2" onclick="ccDev('wall','wall');"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-2" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-2" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-2" onclick="ccDev('projector','projector');"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-2" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-2" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
+                                    <li><input type="checkbox" onclick="ccBits('sensor','sensor');" name="sensor-2"/>Sensor System</li>
+                                	<li><input type="checkbox" onclick="ccBits('bt','bt');" name="bt-2"/>Bluetooth Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('smart-glasses','smart_glasses');" name="smart-glasses-2"/>AR Smart Glasses</li>
+                        			<li><input type="checkbox" onclick="ccBits('feature','feature');" name="feature-2"/>Feature Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartphone','smartphone');" name="smartphone-2"/>Smart Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('gps','gps');" name="gps-2"/>GPS Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('eye-tracker','eye_tracker');" name="eye-tracker-2"/>Eye Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('laptop','laptop');" name="laptop-2"/>Laptop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-touch','tablet_touch');" name="tablet-touch-2"/>Touch Tablet</li>
+                        			<li><input type="checkbox" onclick="ccBits('ereader','ereader');" name="ereader-2"/>eReader</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-pc','tablet_pc');" name="tablet-pc-2"/>Tablet PC</li>
+                        			<li><input type="checkbox" onclick="ccBits('desktop','desktop');" name="desktop-2"/>Desktop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('robot','robot');" name="robot-2"/>Robot</li>
+                        			<li><input type="checkbox" onclick="ccBits('kinect','kinect');" name="kinect-2"/>Kinect (mimicry)</li>
+                        			<li><input type="checkbox" onclick="ccBits('local-lcd','local_lcd');" name="local-lcd-2"/>Local Display (LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartboard','smartboard');" name="smartboard-2"/>Interactive Display (Smartboard)</li>
+                        			<li><input type="checkbox" onclick="ccBits('large-lcd','large_lcd');" name="large-lcd-2"/>Large Display (Large LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('xl-lcd','xl_lcd');" name="xl-lcd-2"/>XL Display (Telepresence)</li>
+                        			<li><input type="checkbox" onclick="ccBits('global-lcd','global_lcd');" name="global-lcd-2"/>Global Display (Stadium Screen)</li>
+                        			<li><input type="checkbox" onclick="ccBits('iroom','iroom');" name="iroom-2"/>iRoom</li>
+                        			<li><input type="checkbox" onclick="ccBits('lab','lab');" name="lab-2"/>Lab Equipment</li>
+                        			<li><input type="checkbox" onclick="ccBits('m3r','m3r');" name="m3r-2"/>M3R</li>
+                        			<li><input type="checkbox" onclick="ccBits('wall','wall');" name="wall-2"/>Wall Space</li>
+                        			<li><input type="checkbox" onclick="ccBits('postnote','postnote');" name="postnote-2"/>Post-It Notes/Notecards</li>
+                        			<li><input type="checkbox" onclick="ccBits('notebook','notebook');" name="notebook-2"/>Notebook/MemoPad</li>
+                        			<li><input type="checkbox" onclick="ccBits('bulletin','bulletin');" name="bulletin-2"/>Bulletin Board</li>
+                        			<li><input type="checkbox" onclick="ccBits('digital-cam','digital_cam');" name="digital-cam-2"/>Digital Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('printer','printer');" name="printer-2"/>Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('3d-printer','3d_printer');" name="3d-printer-2"/>3D Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('fax','fax');" name="fax-2"/>Facsimile Machine</li>
+                        			<li><input type="checkbox" onclick="ccBits('scanner','scanner');" name="scanner-2"/>Scanner</li>
+                        			<li><input type="checkbox" onclick="ccBits('webcam','webcam');" name="webcam-2"/>WebCam</li>
+                        			<li><input type="checkbox" onclick="ccBits('video-cam','video_cam');" name="video-cam-2"/>Video Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('dvd','dvd');" name="dvd-2"/>DVD Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('mp3','mp3');" name="mp3-2"/>MP3 Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('teleconf','teleconf');" name="teleconf-2"/>Teleconference Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('speakers','speakers');" name="speakers-2"/>Speakers</li>
+                        			<li><input type="checkbox" onclick="ccBits('mic','mic');" name="mic-2"/>Microphone</li>
+                        			<li><input type="checkbox" onclick="ccBits('projector','projector');" name="projector-2"/>Projector</li>
+                        			<li><input type="checkbox" onclick="ccBits('proj-screen','proj_screen');" name="proj-screen-2"/>Projection Screen</li>
+                        			<li><input type="checkbox" onclick="ccBits('whiteboard','whiteboard');" name="whiteboard-2"/>Whiteboard</li>
+                        			<li><input type="checkbox" onclick="ccBits('hdd','hdd');" name="hdd-2"/>External HDD</li>
+                        			<li><input type="checkbox" onclick="ccBits('usb','usb');" name="usb-2"/>USB Memory Stick</li>
+                        			<li><input type="checkbox" onclick="ccBits('voice-rec','voice_rec');" name="voice-rec-2"/>Voice Recorder</li>
+                        			<li><input type="checkbox" onclick="ccBits('headset','headset');" name="headset-2"/>Teleconference Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('gaming','gaming');" name="gaming-2"/>Gaming Console</li>
                                 </ul>
                                 <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="smart-3" onclick="ccDev('smart','smartphone');"/>Smart Phone</li>
-                                    <li><input type="checkbox" name="feature-3" onclick="ccDev('feature','feature');"/>Feature Phone</li>
-                                    <li><input type="checkbox" name="gps-3" onclick="ccDev('gps','gps');"/>GPS Tracker</li>
-                                    <li><input type="checkbox" name="laptop-3" onclick="ccDev('laptop','laptop');"/>Laptop</li>
-                                    <li><input type="checkbox" name="touch-3" onclick="ccDev('touch','tablet_touch');"/>Touch Tablet</li>
-                                    <li><input type="checkbox" name="desktop-3" onclick="ccDev('desktop','desktop');"/>Desktop</li>
-                                    <li><input type="checkbox" name="local-3" onclick="ccDev('local','local_lcd');"/>Local Display</li>
-                                    <li><input type="checkbox" name="wall-3" onclick="ccDev('wall','wall');"/>Wall Space</li>
-                                    <li><input type="checkbox" name="board-3" onclick="ccDev('board','bulletin');"/>Bulletin Board</li>
-                                    <li><input type="checkbox" name="digital-cam-3" onclick="ccDev('digital-cam','digital_cam');"/>Digital Camera</li>
-                                    <li><input type="checkbox" name="projector-3" onclick="ccDev('projector','projector');"/>Projector</li>
-                                    <li><input type="checkbox" name="whiteboard-3" onclick="ccDev('whiteboard','whiteboard');"/>Whiteboard</li>
-                                    <li><input type="checkbox" name="post-it-3" onclick="ccDev('post-it','postnote');"/>Post-It Notes</li>
+                                    <li><input type="checkbox" onclick="ccBits('sensor','sensor');" name="sensor-3"/>Sensor System</li>
+                                	<li><input type="checkbox" onclick="ccBits('bt','bt');" name="bt-3"/>Bluetooth Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('smart-glasses','smart_glasses');" name="smart-glasses-3"/>AR Smart Glasses</li>
+                        			<li><input type="checkbox" onclick="ccBits('feature','feature');" name="feature-3"/>Feature Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartphone','smartphone');" name="smartphone-3"/>Smart Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('gps','gps');" name="gps-3"/>GPS Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('eye-tracker','eye_tracker');" name="eye-tracker-3"/>Eye Tracker</li>
+                        			<li><input type="checkbox" onclick="ccBits('laptop','laptop');" name="laptop-3"/>Laptop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-touch','tablet_touch');" name="tablet-touch-3"/>Touch Tablet</li>
+                        			<li><input type="checkbox" onclick="ccBits('ereader','ereader');" name="ereader-3"/>eReader</li>
+                        			<li><input type="checkbox" onclick="ccBits('tablet-pc','tablet_pc');" name="tablet-pc-3"/>Tablet PC</li>
+                        			<li><input type="checkbox" onclick="ccBits('desktop','desktop');" name="desktop-3"/>Desktop Computer</li>
+                        			<li><input type="checkbox" onclick="ccBits('robot','robot');" name="robot-3"/>Robot</li>
+                        			<li><input type="checkbox" onclick="ccBits('kinect','kinect');" name="kinect-3"/>Kinect (mimicry)</li>
+                        			<li><input type="checkbox" onclick="ccBits('local-lcd','local_lcd');" name="local-lcd-3"/>Local Display (LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('smartboard','smartboard');" name="smartboard-3"/>Interactive Display (Smartboard)</li>
+                        			<li><input type="checkbox" onclick="ccBits('large-lcd','large_lcd');" name="large-lcd-3"/>Large Display (Large LCD)</li>
+                        			<li><input type="checkbox" onclick="ccBits('xl-lcd','xl_lcd');" name="xl-lcd-3"/>XL Display (Telepresence)</li>
+                        			<li><input type="checkbox" onclick="ccBits('global-lcd','global_lcd');" name="global-lcd-3"/>Global Display (Stadium Screen)</li>
+                        			<li><input type="checkbox" onclick="ccBits('iroom','iroom');" name="iroom-3"/>iRoom</li>
+                        			<li><input type="checkbox" onclick="ccBits('lab','lab');" name="lab-3"/>Lab Equipment</li>
+                        			<li><input type="checkbox" onclick="ccBits('m3r','m3r');" name="m3r-3"/>M3R</li>
+                        			<li><input type="checkbox" onclick="ccBits('wall','wall');" name="wall-3"/>Wall Space</li>
+                        			<li><input type="checkbox" onclick="ccBits('postnote','postnote');" name="postnote-3"/>Post-It Notes/Notecards</li>
+                        			<li><input type="checkbox" onclick="ccBits('notebook','notebook');" name="notebook-3"/>Notebook/MemoPad</li>
+                        			<li><input type="checkbox" onclick="ccBits('bulletin','bulletin');" name="bulletin-3"/>Bulletin Board</li>
+                        			<li><input type="checkbox" onclick="ccBits('digital-cam','digital_cam');" name="digital-cam-3"/>Digital Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('printer','printer');" name="printer-3"/>Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('3d-printer','3d_printer');" name="3d-printer-3"/>3D Printer</li>
+                        			<li><input type="checkbox" onclick="ccBits('fax','fax');" name="fax-3"/>Facsimile Machine</li>
+                        			<li><input type="checkbox" onclick="ccBits('scanner','scanner');" name="scanner-3"/>Scanner</li>
+                        			<li><input type="checkbox" onclick="ccBits('webcam','webcam');" name="webcam-3"/>WebCam</li>
+                        			<li><input type="checkbox" onclick="ccBits('video-cam','video_cam');" name="video-cam-3"/>Video Camera</li>
+                        			<li><input type="checkbox" onclick="ccBits('dvd','dvd');" name="dvd-3"/>DVD Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('mp3','mp3');" name="mp3-3"/>MP3 Player</li>
+                        			<li><input type="checkbox" onclick="ccBits('teleconf','teleconf');" name="teleconf-3"/>Teleconference Phone</li>
+                        			<li><input type="checkbox" onclick="ccBits('speakers','speakers');" name="speakers-3"/>Speakers</li>
+                        			<li><input type="checkbox" onclick="ccBits('mic','mic');" name="mic-3"/>Microphone</li>
+                        			<li><input type="checkbox" onclick="ccBits('projector','projector');" name="projector-3"/>Projector</li>
+                        			<li><input type="checkbox" onclick="ccBits('proj-screen','proj_screen');" name="proj-screen-3"/>Projection Screen</li>
+                        			<li><input type="checkbox" onclick="ccBits('whiteboard','whiteboard');" name="whiteboard-3"/>Whiteboard</li>
+                        			<li><input type="checkbox" onclick="ccBits('hdd','hdd');" name="hdd-3"/>External HDD</li>
+                        			<li><input type="checkbox" onclick="ccBits('usb','usb');" name="usb-3"/>USB Memory Stick</li>
+                        			<li><input type="checkbox" onclick="ccBits('voice-rec','voice_rec');" name="voice-rec-3"/>Voice Recorder</li>
+                        			<li><input type="checkbox" onclick="ccBits('headset','headset');" name="headset-3"/>Teleconference Headset</li>
+                        			<li><input type="checkbox" onclick="ccBits('gaming','gaming');" name="gaming-3"/>Gaming Console</li>
                                 </ul>
                             </form>
                         </div>
@@ -500,7 +622,7 @@
                                 <li onclick="$('#client_prod').toggle(); $(this).toggleClass('choice');">Client Productivity (MSOffice)</li>
                                 <li onclick="$('#vr').toggle(); $(this).toggleClass('choice');">Virtual Reality</li>
                                 <li onclick="$('#ar').toggle(); $(this).toggleClass('choice');">Augmented Reality</li>
-                                <li onclick="$('#gelocation').toggle(); $(this).toggleClass('choice');">Geolocation Service</li>
+                                <li onclick="$('#geolocation').toggle(); $(this).toggleClass('choice');">Geolocation Service</li>
                                 <li onclick="$('#text').toggle(); $(this).toggleClass('choice');">Text</li>
                                 <li onclick="$('#sketch').toggle(); $(this).toggleClass('choice');">Sketch (analog)</li>
                                 <li onclick="$('#calendar').toggle(); $(this).toggleClass('choice');">Calendar</li>
@@ -530,47 +652,47 @@
                             
                             <!-- ADD TITLES TO ALL IMAGES!!!!! -->
                             
-                                <img title="Gaming" style="display:none;" id="gaming-2" onmouseover="showAape('gaming');" onmouseout="showAape('gaming');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
-                                <img title="M3R" style="display:none;" id="m3r-2" onmouseover="showAape('m3r');" onmouseout="showAape('m3r');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
-                                <img title="Augmented Reality" style="display:none;" id="ar" onmouseover="showAape('ar');" onmouseout="showAape('ar');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
-                                <img title="Virtual Reality" style="display:none;" id="vr" onmouseover="showAape('vr');" onmouseout="showAape('vr');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
-                                <img title="Bookmarking" style="display:none;" id="bookmark" onmouseover="showAape('bookmark');" onmouseout="showAape('bookmark');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
-                                <img title="Geolocation" style="display:none;" id="geolocation" onmouseover="showAape('geolocation');" onmouseout="showAape('geolocation');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
-                                <img title="Social Media" style="display:none;" id="social" onmouseover="showAape('social');" onmouseout="showAape('social');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
-                                <img title="Web Productivity" style="display:none;" id="web_prod" onmouseover="showAape('web_prod');" onmouseout="showAape('web_prod');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
-                                <img title="Discussion Forum" style="display:none;" id="discussion" onmouseover="showAape('discussion');" onmouseout="showAape('discussion');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
-                                <img title="Wiki" style="display:none;" id="wiki" onmouseover="showAape('wiki');" onmouseout="showAape('wiki');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
-                                <img title="WebCam" style="display:none;" id="webcam-2" onmouseover="showAape('webcam');" onmouseout="showAape('webcam');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
+                                <img title="Gaming" style="display:none;" class="initSize" id="gaming-2" onmouseover="showAape('gaming');" onmouseout="showAape('gaming');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/gaming.png"/>
+                                <img title="M3R" style="display:none;" class="initSize" id="m3r-2" onmouseover="showAape('m3r');" onmouseout="showAape('m3r');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/m3r.png"/>
+                                <img title="Augmented Reality" style="display:none;" class="initSize" id="ar" onmouseover="showAape('ar');" onmouseout="showAape('ar');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/ar.png"/>
+                                <img title="Virtual Reality" style="display:none;" class="initSize" id="vr" onmouseover="showAape('vr');" onmouseout="showAape('vr');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/vr.png"/>
+                                <img title="Bookmarking" style="display:none;" class="initSize" id="bookmark" onmouseover="showAape('bookmark');" onmouseout="showAape('bookmark');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/bookmark.png"/>
+                                <img title="Geolocation" style="display:none;" class="initSize" id="geolocation" onmouseover="showAape('geolocation');" onmouseout="showAape('geolocation');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/geolocation.png"/>
+                                <img title="Social Media" style="display:none;" class="initSize" id="social" onmouseover="showAape('social');" onmouseout="showAape('social');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/social.jpg"/>
+                                <img title="Web Productivity" style="display:none;" class="initSize" id="web_prod" onmouseover="showAape('web_prod');" onmouseout="showAape('web_prod');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/web_prod.png"/>
+                                <img title="Discussion Forum" style="display:none;" class="initSize" id="discussion" onmouseover="showAape('discussion');" onmouseout="showAape('discussion');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/discussion.png"/>
+                                <img title="Wiki" style="display:none;" class="initSize" id="wiki" onmouseover="showAape('wiki');" onmouseout="showAape('wiki');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/wiki.png"/>
+                                <img title="WebCam" style="display:none;" class="initSize" id="webcam-2" onmouseover="showAape('webcam');" onmouseout="showAape('webcam');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/webcam.png"/>
                             </div>
                             <div class="blu-line">
-                                <img title="Social Commentary" style="display:none;" id="commentary" onmouseover="showAape('commentary');" onmouseout="showAape('commentary');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
-                                <img title="Client Productivity" style="display:none;" id="client_prod" onmouseover="showAape('client_prod');" onmouseout="showAape('client_prod');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
-                                <img title="Calendar" style="display:none;" id="calendar" onmouseover="showAape('calendar');" onmouseout="showAape('calendar');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
-                                <img title="Simulation" style="display:none;" id="sim" onmouseover="showAape('sim');" onmouseout="showAape('sim');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
-                                <img title="Blog" style="display:none;" id="blog" onmouseover="showAape('blog');" onmouseout="showAape('blog');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
-                                <img title="2D Modeling" style="display:none;" id="2d" onmouseover="showAape('2d');" onmouseout="showAape('2d');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
-                                <img title="3D Modeling" style="display:none;" id="3d" onmouseover="showAape('3d');" onmouseout="showAape('3d');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
-                                <img title="4D Modeling" style="display:none;" id="4d" onmouseover="showAape('4d');" onmouseout="showAape('4d');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
-                                <img title="Network Analysis" style="display:none;" id="netw_analysis" onmouseover="showAape('netw_analysis');" onmouseout="showAape('netw_analysis');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
+                                <img title="Social Commentary" style="display:none;" class="initSize" id="commentary" onmouseover="showAape('commentary');" onmouseout="showAape('commentary');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/commentary.png"/>
+                                <img title="Client Productivity" style="display:none;" class="initSize" id="client_prod" onmouseover="showAape('client_prod');" onmouseout="showAape('client_prod');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/client_prod.png"/>
+                                <img title="Calendar" style="display:none;" class="initSize" id="calendar" onmouseover="showAape('calendar');" onmouseout="showAape('calendar');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/calendar.jpg"/>
+                                <img title="Simulation" style="display:none;" class="initSize" id="sim" onmouseover="showAape('sim');" onmouseout="showAape('sim');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/sim.png"/>
+                                <img title="Blog" style="display:none;" class="initSize" id="blog" onmouseover="showAape('blog');" onmouseout="showAape('blog');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/blog.png"/>
+                                <img title="2D Modeling" style="display:none;" class="initSize" id="2d" onmouseover="showAape('2d');" onmouseout="showAape('2d');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/2d.png"/>
+                                <img title="3D Modeling" style="display:none;" class="initSize" id="3d" onmouseover="showAape('3d');" onmouseout="showAape('3d');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/3d.png"/>
+                                <img title="4D Modeling" style="display:none;" class="initSize" id="4d" onmouseover="showAape('4d');" onmouseout="showAape('4d');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/4d.png"/>
+                                <img title="Network Analysis" style="display:none;" class="initSize" id="netw_analysis" onmouseover="showAape('netw_analysis');" onmouseout="showAape('netw_analysis');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/netw_analysis.png"/>
                             </div>
                             <div class="ylw-line">
-                                <img title="Images" style="display:none;" id="image" onmouseover="showAape('image');" onmouseout="showAape('image');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
-                                <img title="Video" style="display:none;" id="video" onmouseover="showAape('video');" onmouseout="showAape('video');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
-                                <img title="Audio" style="display:none;" id="audio" onmouseover="showAape('audio');" onmouseout="showAape('audio');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img title="Twitter" style="display:none;" id="twitter" onmouseover="showAape('twitter');" onmouseout="showAape('twitter');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
-                                <img title="SMS" style="display:none;" id="sms" onmouseover="showAape('sms');" onmouseout="showAape('sms');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
-                                <img title="Email" style="display:none;" id="email" onmouseover="showAape('email');" onmouseout="showAape('email');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
-                                <img title="RSS" style="display:none;" id="rss" onmouseover="showAape('rss');" onmouseout="showAape('rss');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
-                                <img title="Instant Messaging" style="display:none;" id="im" onmouseover="showAape('im');" onmouseout="showAape('im');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
-                                <img title="Photo Sharing" style="display:none;" id="photoshare" onmouseover="showAape('photoshare');" onmouseout="showAape('photoshare');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
+                                <img title="Images" style="display:none;" class="initSize" id="image" onmouseover="showAape('image');" onmouseout="showAape('image');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/image.png"/>
+                                <img title="Video" style="display:none;" class="initSize" id="video" onmouseover="showAape('video');" onmouseout="showAape('video');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/video.png"/>
+                                <img title="Audio" style="display:none;" class="initSize" id="audio" onmouseover="showAape('audio');" onmouseout="showAape('audio');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img title="Twitter" style="display:none;" class="initSize" id="twitter" onmouseover="showAape('twitter');" onmouseout="showAape('twitter');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/twitter.png"/>
+                                <img title="SMS" style="display:none;" class="initSize" id="sms" onmouseover="showAape('sms');" onmouseout="showAape('sms');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/sms.png"/>
+                                <img title="Email" style="display:none;" class="initSize" id="email" onmouseover="showAape('email');" onmouseout="showAape('email');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/email.png"/>
+                                <img title="RSS" style="display:none;" class="initSize" id="rss" onmouseover="showAape('rss');" onmouseout="showAape('rss');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/rss.png"/>
+                                <img title="Instant Messaging" style="display:none;" class="initSize" id="im" onmouseover="showAape('im');" onmouseout="showAape('im');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/im.png"/>
+                                <img title="Photo Sharing" style="display:none;" class="initSize" id="photoshare" onmouseover="showAape('photoshare');" onmouseout="showAape('photoshare');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/photoshare.png"/>
                             </div>
                             <div class="red-line">
-                                <img title="Text" style="display:none;" id="text"  onmouseover="showAape('text');" onmouseout="showAape('text');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
-                                <img title="Sketch" style="display:none;" id="sketch" onmouseover="showAape('sketch');" onmouseout="showAape('sketch');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
-                                <img title="Speech" style="display:none;" id="speech" onmouseover="showAape('speech');" onmouseout="showAape('speech');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
-                                <img title="Gestures" style="display:none;" id="gesture" onmouseover="showAape('gesture');" onmouseout="showAape('gesture');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
-                                <img title="Facsimile" style="display:none;" id="fax-2" onmouseover="showAape('fax');" onmouseout="showAape('fax');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/60/http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
-                                <img title="Mail" style="display:none;" id="mail" onmouseover="showAape('mail');" onmouseout="showAape('mail');" onclick="$(this).toggleClass('glow');" src="http://src.sencha.io/15/http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
+                                <img title="Text" style="display:none;" class="initSize" id="text"  onmouseover="showAape('text');" onmouseout="showAape('text');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/text.png"/>
+                                <img title="Sketch" style="display:none;" class="initSize" id="sketch" onmouseover="showAape('sketch');" onmouseout="showAape('sketch');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/sketch.png"/>
+                                <img title="Speech" style="display:none;" class="initSize" id="speech" onmouseover="showAape('speech');" onmouseout="showAape('speech');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/audio.png"/>
+                                <img title="Gestures" style="display:none;" class="initSize" id="gesture" onmouseover="showAape('gesture');" onmouseout="showAape('gesture');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/gesture.png"/>
+                                <img title="Facsimile" style="display:none;" class="initSize" id="fax-2" onmouseover="showAape('fax');" onmouseout="showAape('fax');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/fax.png"/>
+                                <img title="Mail" style="display:none;" class="initSize" id="mail" onmouseover="showAape('mail');" onmouseout="showAape('mail');" onclick="$(this).toggleClass('glow');" src="http://ldt.stanford.edu/~lmedlock/icons/snail_mail.png"/>
                             </div>
                         </div>
                         
@@ -594,55 +716,115 @@
                             <div id="vw" class="gold-action">VIEW</div>
                         </div>
                         
-                        <div id="team-options">
+                        <div class="team-options">
                             <form>
                                 <p> Team Member 1</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-1" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="videoconf-1" onclick="ccDev('video','video');"/>Video</li>
-                                    <li><input type="checkbox" name="office-1" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
-                                    <li><input type="checkbox" name="text-1" onclick="ccDev('text','text');"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-1" onclick="ccDev('sketch','sketch');"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-1" onclick="ccDev('cal','calendar');"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-1" onclick="ccDev('fax','fax-2');"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-1" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-1" onclick="ccDev('sms','sms');"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-1" onclick="ccDev('3d','3d');"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-1" onclick="ccDev('email','email');"/>Email</li>
-                                    <li><input type="checkbox" name="rss-1" onclick="ccDev('rss','rss');"/>RSS</li>
-                                    <li><input type="checkbox" name="im-1" onclick="ccDev('im','im');"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('gaming','gaming-2');" name="gaming-1"/>Games</li>
+                                    <li><input type="checkbox" onclick="ccBits('m3r-'m3r-2');" name="m3r-1"/>M3R</li>
+                                    <li><input type="checkbox" onclick="ccBits('webcam','webcam-2');" name="webcam-1"/>Video/Web Conferencing</li>
+                                    <li><input type="checkbox" onclick="ccBits('commentary','commentary');" name="commentary-1"/>Social Commentary (Open)</li>
+                                    <li><input type="checkbox" onclick="ccBits('discussion','discussion');" name="discussion-1"/>Discussion Forum (focused)</li>
+                                    <li><input type="checkbox" onclick="ccBits('web-prod','web_prod');" name="web-prod-1"/>Cloud Productivity (GDocs)</li>
+                                    <li><input type="checkbox" onclick="ccBits('wiki','wiki');" name="wiki-1"/>Wiki</li>
+                                    <li><input type="checkbox" onclick="ccBits('client-prod','client_prod');" name="client-prod-1"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" onclick="ccBits('vr','vr');" name="vr-1"/>Virtual Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('ar','ar');" name="ar-1"/>Augmented Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('gelocation','gelocation');" name="gelocation-1"/>Geolocation Service</li>
+                                    <li><input type="checkbox" onclick="ccBits('text','text');" name="text-1"/>Text</li>
+                                    <li><input type="checkbox" onclick="ccBits('sketch','sketch');" name="sketch-1"/>Sketch (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('calendar','calendar');" name="calendar-1"/>Calendar</li>
+                                    <li><input type="checkbox" onclick="ccBits('speech','speech');" name="speech-1"/>Speech (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('gesture','gesture');" name="gesture-1"/>Gestures (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('mail','mail');" name="mail-1"/>[snail] Mail</li>
+                                    <li><input type="checkbox" onclick="ccBits('sim','sim');" name="sim-1"/>Simulator</li>
+                                    <li><input type="checkbox" onclick="ccBits('image','image');" name="image-1"/>Digital Image</li>
+                                    <li><input type="checkbox" onclick="ccBits('video','video');" name="video-1"/>Video</li>
+                                    <li><input type="checkbox" onclick="ccBits('audio','audio');" name="audio-1"/>Audio</li>
+                                    <li><input type="checkbox" onclick="ccBits('blog','blog');" name="blog-1"/>Individual Blog</li>
+                                    <li><input type="checkbox" onclick="ccBits('bookmark','bookmark');" name="bookmark-1"/>Bookmarking</li>
+                                    <li><input type="checkbox" onclick="ccBits('twitter','twitter');" name="twitter-1"/>Twitter</li>
+                                    <li><input type="checkbox" onclick="ccBits('sms','sms');" name="sms-1"/>SMS</li>
+                                    <li><input type="checkbox" onclick="ccBits('2d','2d');" name="2d-1"/>2D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('3d','3d');" name="3d-1"/>3D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('4d','4d');" name="4d-1"/>4D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('email','email');" name="email-1"/>Email</li>
+                                    <li><input type="checkbox" onclick="ccBits('rss','rss');" name="rss-1"/>RSS Feed</li>
+                                    <li><input type="checkbox" onclick="ccBits('social','social');" name="social-1"/>Social Media (e.g. FB)</li>
+                                    <li><input type="checkbox" onclick="ccBits('im','im');" name="im-1"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('netw-analysis','netw_analysis');" name="netw-analysis-1"/>Network Analysis</li>
                                 </ul>
                                 <p>Team Member 2</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-2" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-2" onclick="ccDev('video','video');"/>Video</li>
-                                    <li><input type="checkbox" name="office-2" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
-                                    <li><input type="checkbox" name="text-2" onclick="ccDev('text','text');"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-2" onclick="ccDev('sketch','sketch');"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-2" onclick="ccDev('cal','calendar');"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-2" onclick="ccDev('fax','fax-2');"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-2" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-2" onclick="ccDev('sms','sms');"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-2" onclick="ccDev('3d','3d');"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-2" onclick="ccDev('email','email');"/>Email</li>
-                                    <li><input type="checkbox" name="rss-2" onclick="ccDev('rss','rss');"/>RSS</li>
-                                    <li><input type="checkbox" name="im-2" onclick="ccDev('im','im');"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('gaming','gaming-2');" name="gaming-2"/>Games</li>
+                                    <li><input type="checkbox" onclick="ccBits('m3r-'m3r-2');" name="m3r-2"/>M3R</li>
+                                    <li><input type="checkbox" onclick="ccBits('webcam','webcam-2');" name="webcam-2"/>Video/Web Conferencing</li>
+                                    <li><input type="checkbox" onclick="ccBits('commentary','commentary');" name="commentary-2"/>Social Commentary (Open)</li>
+                                    <li><input type="checkbox" onclick="ccBits('discussion','discussion');" name="discussion-2"/>Discussion Forum (focused)</li>
+                                    <li><input type="checkbox" onclick="ccBits('web-prod','web_prod');" name="web-prod-2"/>Cloud Productivity (GDocs)</li>
+                                    <li><input type="checkbox" onclick="ccBits('wiki','wiki');" name="wiki-2"/>Wiki</li>
+                                    <li><input type="checkbox" onclick="ccBits('client-prod','client_prod');" name="client-prod-2"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" onclick="ccBits('vr','vr');" name="vr-2"/>Virtual Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('ar','ar');" name="ar-2"/>Augmented Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('gelocation','gelocation');" name="gelocation-2"/>Geolocation Service</li>
+                                    <li><input type="checkbox" onclick="ccBits('text','text');" name="text-2"/>Text</li>
+                                    <li><input type="checkbox" onclick="ccBits('sketch','sketch');" name="sketch-2"/>Sketch (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('calendar','calendar');" name="calendar-2"/>Calendar</li>
+                                    <li><input type="checkbox" onclick="ccBits('speech','speech');" name="speech-2"/>Speech (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('gesture','gesture');" name="gesture-2"/>Gestures (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('mail','mail');" name="mail-2"/>[snail] Mail</li>
+                                    <li><input type="checkbox" onclick="ccBits('sim','sim');" name="sim-2"/>Simulator</li>
+                                    <li><input type="checkbox" onclick="ccBits('image','image');" name="image-2"/>Digital Image</li>
+                                    <li><input type="checkbox" onclick="ccBits('video','video');" name="video-2"/>Video</li>
+                                    <li><input type="checkbox" onclick="ccBits('audio','audio');" name="audio-2"/>Audio</li>
+                                    <li><input type="checkbox" onclick="ccBits('blog','blog');" name="blog-2"/>Individual Blog</li>
+                                    <li><input type="checkbox" onclick="ccBits('bookmark','bookmark');" name="bookmark-2"/>Bookmarking</li>
+                                    <li><input type="checkbox" onclick="ccBits('twitter','twitter');" name="twitter-2"/>Twitter</li>
+                                    <li><input type="checkbox" onclick="ccBits('sms','sms');" name="sms-2"/>SMS</li>
+                                    <li><input type="checkbox" onclick="ccBits('2d','2d');" name="2d-2"/>2D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('3d','3d');" name="3d-2"/>3D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('4d','4d');" name="4d-2"/>4D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('email','email');" name="email-2"/>Email</li>
+                                    <li><input type="checkbox" onclick="ccBits('rss','rss');" name="rss-2"/>RSS Feed</li>
+                                    <li><input type="checkbox" onclick="ccBits('social','social');" name="social-2"/>Social Media (e.g. FB)</li>
+                                    <li><input type="checkbox" onclick="ccBits('im','im');" name="im-2"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('netw-analysis','netw_analysis');" name="netw-analysis-2"/>Network Analysis</li>
                                 </ul>
                                 <p>Team Member 3</p>
                                 <ul style="margin-left:1em; list-style:none;">
-                                    <li><input type="checkbox" name="social-3" onclick="ccDev('social','social');"/>Social Media</li>
-                                    <li><input type="checkbox" name="video-3" onclick="ccDev('video','video');"/>Video</li>
-                                    <li><input type="checkbox" name="office-3" onclick="ccDev('office','client_prod');"/>Client Productivity</li>
-                                    <li><input type="checkbox" name="text-3" onclick="ccDev('text','text');"/>Text</li>
-                                    <li><input type="checkbox" name="sketch-3" onclick="ccDev('sketch','sketch');"/>Sketch</li>
-                                    <li><input type="checkbox" name="cal-3" onclick="ccDev('cal','calendar');"/>Calendar</li>
-                                    <li><input type="checkbox" name="fax-3" onclick="ccDev('fax','fax-2');"/>Fax</li>
-                                    <li><input type="checkbox" name="bookmark-3" onclick="ccDev('bookmark','bookmark');"/>Bookmarking</li>
-                                    <li><input type="checkbox" name="sms-3" onclick="ccDev('sms','sms');"/>SMS</li>
-                                    <li><input type="checkbox" name="3d-3" onclick="ccDev('3d','3d');"/>3D Model</li>
-                                    <li><input type="checkbox" name="email-3" onclick="ccDev('email','email');"/>Email</li>
-                                    <li><input type="checkbox" name="rss-3" onclick="ccDev('rss','rss');"/>RSS</li>
-                                    <li><input type="checkbox" name="im-3" onclick="ccDev('im','im');"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('gaming','gaming-2');" name="gaming-3"/>Games</li>
+                                    <li><input type="checkbox" onclick="ccBits('m3r-'m3r-2');" name="m3r-3"/>M3R</li>
+                                    <li><input type="checkbox" onclick="ccBits('webcam','webcam-2');" name="webcam-3"/>Video/Web Conferencing</li>
+                                    <li><input type="checkbox" onclick="ccBits('commentary','commentary');" name="commentary-3"/>Social Commentary (Open)</li>
+                                    <li><input type="checkbox" onclick="ccBits('discussion','discussion');" name="discussion-3"/>Discussion Forum (focused)</li>
+                                    <li><input type="checkbox" onclick="ccBits('web-prod','web_prod');" name="web-prod-3"/>Cloud Productivity (GDocs)</li>
+                                    <li><input type="checkbox" onclick="ccBits('wiki','wiki');" name="wiki-3"/>Wiki</li>
+                                    <li><input type="checkbox" onclick="ccBits('client-prod','client_prod');" name="client-prod-3"/>Client Productivity (MSOffice)</li>
+                                    <li><input type="checkbox" onclick="ccBits('vr','vr');" name="vr-3"/>Virtual Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('ar','ar');" name="ar-3"/>Augmented Reality</li>
+                                    <li><input type="checkbox" onclick="ccBits('gelocation','gelocation');" name="gelocation-3"/>Geolocation Service</li>
+                                    <li><input type="checkbox" onclick="ccBits('text','text');" name="text-3"/>Text</li>
+                                    <li><input type="checkbox" onclick="ccBits('sketch','sketch');" name="sketch-3"/>Sketch (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('calendar','calendar');" name="calendar-3"/>Calendar</li>
+                                    <li><input type="checkbox" onclick="ccBits('speech','speech');" name="speech-3"/>Speech (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('gesture','gesture');" name="gesture-3"/>Gestures (analog)</li>
+                                    <li><input type="checkbox" onclick="ccBits('mail','mail');" name="mail-3"/>[snail] Mail</li>
+                                    <li><input type="checkbox" onclick="ccBits('sim','sim');" name="sim-3"/>Simulator</li>
+                                    <li><input type="checkbox" onclick="ccBits('image','image');" name="image-3"/>Digital Image</li>
+                                    <li><input type="checkbox" onclick="ccBits('video','video');" name="video-3"/>Video</li>
+                                    <li><input type="checkbox" onclick="ccBits('audio','audio');" name="audio-3"/>Audio</li>
+                                    <li><input type="checkbox" onclick="ccBits('blog','blog');" name="blog-3"/>Individual Blog</li>
+                                    <li><input type="checkbox" onclick="ccBits('bookmark','bookmark');" name="bookmark-3"/>Bookmarking</li>
+                                    <li><input type="checkbox" onclick="ccBits('twitter','twitter');" name="twitter-3"/>Twitter</li>
+                                    <li><input type="checkbox" onclick="ccBits('sms','sms');" name="sms-3"/>SMS</li>
+                                    <li><input type="checkbox" onclick="ccBits('2d','2d');" name="2d-3"/>2D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('3d','3d');" name="3d-3"/>3D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('4d','4d');" name="4d-3"/>4D Model</li>
+                                    <li><input type="checkbox" onclick="ccBits('email','email');" name="email-3"/>Email</li>
+                                    <li><input type="checkbox" onclick="ccBits('rss','rss');" name="rss-3"/>RSS Feed</li>
+                                    <li><input type="checkbox" onclick="ccBits('social','social');" name="social-3"/>Social Media (e.g. FB)</li>
+                                    <li><input type="checkbox" onclick="ccBits('im','im');" name="im-3"/>Instant Messaging</li>
+                                    <li><input type="checkbox" onclick="ccBits('netw-analysis','netw_analysis');" name="netw-analysis-3"/>Network Analysis</li>
                                 </ul>
                             </form>
                         </div>

@@ -287,12 +287,23 @@ footer a.up{
     color:#23EBDD;
 }
 
-#team-options{
+.team-options{
     float:right;
     background-color:#424041;
     width:140px;
     height:auto;
     padding:5px;
+}
+
+.team-options ul{
+    list-style:none;
+    height:100px;
+    width:120px;
+    font-size:10px;
+    overflow-y:scroll;
+    padding:5px;
+    border-bottom:1px dotted #fff;
+    border-top:1px dotted #fff;
 }
 
 .aware{
@@ -336,7 +347,8 @@ footer a.up{
 
 .engage{
     color:white;
-    background-color:#36A845;position:relative;
+    background-color:#36A845;
+    position:relative;
     width:80px;
     height:20px;
     font-size:12px;
@@ -366,4 +378,9 @@ text-align:center;
     -moz-box-shadow: 0 0 8px #fff;
     -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0px 0px 8px #fff;
+}
+
+.initSize{
+    width:40px;
+    height:40px;
 }
